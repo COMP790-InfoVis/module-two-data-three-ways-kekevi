@@ -1,0 +1,222 @@
+---
+title: "IPUMS Read"
+output: html_document
+---
+
+# Aggregation
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading in the raw data
+
+```{r}
+if (!require("ipumsr")) stop("Reading IPUMS data into R requires the ipumsr package. It can be installed using the following command: install.packages('ipumsr')")
+
+ddi <- read_ipums_ddi("usa_00002.xml")
+data <- read_ipums_micro(ddi)
+```
+
+## Converting to tibble
+
+```{r}
+library(tibble)
+library(dplyr)
+library(tidyverse)
+d = tibble(data)
+```
+
+## Consolidating Race
+```{r}
+d = d %>% select(-RACED, -HISPAND) 
+
+# change race column such that "Hispanic" is a race (like it is treated in all American data analysis) 
+# note we temporarily label as race `10` (cause apparently they divided Asian into like 3 races)
+d = d %>% mutate(RACE = replace(RACE, HISPAN != 0, 10)) %>% select(-HISPAN)
+
+# combining asians into race `4`
+d = d %>% mutate(RACE = replace(RACE, RACE %in% c(5, 6), 4))
+
+# combining Others/Mixed into race `7`
+d = d %>% mutate(RACE = replace(RACE, RACE %in% c(8, 9), 7))
+```
+
+## Removing Unemployed/No income
+```{r}
+d = d %>% filter(INDNAICS != '0') %>% filter(INCWAGE != 0) %>% filter(INCWAGE != 999999) %>% filter(INCWAGE != 999998)
+```
+
+## Consolidating Industries
+```{r}
+naics = function(indnaics) {
+  mono = substr(indnaics, 1, 1)
+  bi = substr(indnaics, 1, 2)
+  internal = function(mono, bi){
+    case_when(
+      mono == '1' ~ 'Agriculture',
+      bi == '21' ~ 'Mining',
+      bi == '22' ~ 'Utilities',
+      bi == '23' ~ 'Construction',
+      mono == '3' ~ 'Manufacturing',
+      bi == '42' ~ 'Wholesale Trade',
+      bi == '44' ~ 'Retail',
+      bi == '45' ~ 'Retail',
+      mono == '4' ~ 'Transportation',
+      bi == '51' ~ 'Media',
+      bi == '52' ~ 'Banking/Insurance',
+      bi == '53' ~ 'Real Estate/Lending',
+      bi == '54' ~ 'Science/Tech',
+      bi == '55' ~ 'Management',
+      bi == '56' ~ 'Administration',
+      bi == '61' ~ 'Education',
+      bi == '62' ~ 'Healthcare',
+      bi == '71' ~ 'Arts',
+      bi == '72' ~ 'Food/Lodging',
+      mono == '8' ~ 'Others',
+      mono == '9' ~ 'Government',
+      #.default = 'None'
+    )}
+  return(internal(mono, bi))
+}
+d = d %>% mutate(INDUSTRY = naics(INDNAICS))
+# removing INDAICS
+d = d %>% select(-INDNAICS)
+```
+
+## Replacing w/ State Names
+```{r}
+d = d %>% mutate(STATE = case_when(
+  STATEFIP == 1 ~ 'Alabama',
+  STATEFIP == 2 ~ 'Alaska',
+  
+  STATEFIP == 4 ~ 'Arizona',
+  STATEFIP == 5 ~ 'Arkansas',
+  STATEFIP == 6 ~ 'California',
+  
+  STATEFIP == 8 ~ 'Colorado',
+  STATEFIP == 9 ~ 'Connecticut',
+  STATEFIP == 10 ~ 'Delaware',
+  STATEFIP == 11 ~ 'District of Columbia',
+  STATEFIP == 12 ~ 'Florida',
+  STATEFIP == 13 ~ 'Georgia',
+  
+  STATEFIP == 15 ~ 'Hawaii',
+  STATEFIP == 16 ~ 'Idaho',
+  STATEFIP == 17 ~ 'Illinois',
+  STATEFIP == 18 ~ 'Indiana',
+  STATEFIP == 19 ~ 'Iowa',
+  STATEFIP == 20 ~ 'Kansas',
+  STATEFIP == 21 ~ 'Kentucky',
+  STATEFIP == 22 ~ 'Louisiana',
+  STATEFIP == 23 ~ 'Maine',
+  STATEFIP == 24 ~ 'Maryland',
+  STATEFIP == 25 ~ 'Massachusetts',
+  STATEFIP == 26 ~ 'Michigan',
+  STATEFIP == 27 ~ 'Minnesota',
+  STATEFIP == 28 ~ 'Mississippi',
+  STATEFIP == 29 ~ 'Missouri',
+  STATEFIP == 30 ~ 'Montana',
+  STATEFIP == 31 ~ 'Nebraska',
+  STATEFIP == 32 ~ 'Nevada',
+  STATEFIP == 33 ~ 'New Hampshire',
+  STATEFIP == 34 ~ 'New Jersey',
+  STATEFIP == 35 ~ 'New Mexico',
+  STATEFIP == 36 ~ 'New York',
+  STATEFIP == 37 ~ 'North Carolina',
+  STATEFIP == 38 ~ 'North Dakota',
+  STATEFIP == 39 ~ 'Ohio',
+  STATEFIP == 40 ~ 'Oklahoma',
+  STATEFIP == 41 ~ 'Oregon',
+  STATEFIP == 42 ~ 'Pennsylvania',
+  
+  STATEFIP == 44 ~ 'Rhode Island',
+  STATEFIP == 45 ~ 'South Carolina',
+  STATEFIP == 46 ~ 'South Dakota',
+  STATEFIP == 47 ~ 'Tennessee',
+  STATEFIP == 48 ~ 'Texas',
+  STATEFIP == 49 ~ 'Utah',
+  STATEFIP == 50 ~ 'Vermont',
+  STATEFIP == 51 ~ 'Virginia',
+  
+  STATEFIP == 53 ~ 'Washington',
+  STATEFIP == 54 ~ 'West Virginia',
+  STATEFIP == 55 ~ 'Wisconsin',
+  STATEFIP == 56 ~ 'Wyoming',
+))
+d = d %>% select(-STATEFIP)
+```
+
+## Consolidating counts (PERWT) of condensed form
+
+```{r}
+d = d %>% group_by(SEX, AGE, RACE, INCWAGE, INDUSTRY, STATE) %>% summarize(COUNT = sum(PERWT)) %>% ungroup()
+```
+
+## Consolidating into age groups
+```{r}
+d = d %>% mutate(AGE_GROUP = case_when(
+  0 <= AGE & AGE < 25 ~ 0,
+  25 <= AGE & AGE < 35 ~ 25,
+  35 <= AGE & AGE < 45 ~ 35,
+  45 <= AGE & AGE < 55 ~ 45,
+  55 <= AGE ~ 55
+)) %>% select(-AGE) %>% 
+  group_by(SEX, AGE_GROUP, RACE, INCWAGE, INDUSTRY, STATE) %>%
+  summarize(COUNT = sum(COUNT)) %>% 
+  ungroup()
+```
+
+# Creating end tables
+
+```{r}
+pivot_sex = function(d) {
+  d %>% pivot_wider(names_from = SEX, values_from = MED_INC) %>% rename(MED_INC_M = `1`, MED_INC_F = `2`)
+}
+```
+
+## Wages by State and Sex
+```{r}
+dmap = d %>% select(-AGE_GROUP, -RACE, -INDUSTRY) %>% 
+  group_by(STATE, SEX, INCWAGE) %>%
+  summarize(COUNT = sum(COUNT)) %>%
+  ungroup() %>% 
+  group_by(STATE, SEX) %>%
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
+  ungroup()
+
+write.table(dmap %>% pivot_sex, file = "dmap.csv", sep=",", row.names = F)
+```
+
+## Wages by State and Sex and Race
+```{r}
+dmaprace = d %>% select(-AGE_GROUP, -INDUSTRY) %>%
+  group_by(STATE, SEX, RACE, INCWAGE) %>%
+  summarize(COUNT = sum(COUNT)) %>%
+  ungroup() %>%
+  group_by(STATE, SEX, RACE) %>%
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
+  ungroup()
+```
+
+## Wages by State and Sex and Industry
+```{r}
+dmapindustry = d %>% select(-AGE_GROUP, -RACE) %>%
+  group_by(STATE, SEX, INDUSTRY, INCWAGE) %>%
+  summarize(COUNT = sum(COUNT)) %>%
+  ungroup() %>%
+  group_by(STATE, SEX, INDUSTRY) %>%
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
+  ungroup()
+```
+
+## Wages by State and Sex and Age Group
+```{r}
+dmapages = d %>% select(-INDUSTRY, -RACE) %>%
+  group_by(STATE, SEX, AGE_GROUP, INCWAGE) %>%
+  summarize(COUNT = sum(COUNT)) %>%
+  ungroup() %>%
+  group_by(STATE, SEX, AGE_GROUP) %>%
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
+  ungroup()
+```

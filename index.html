@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <!-- <script src="/states-albers-10m.js"></script> -->
+    <script>
+      // globals
+      const peek = (v) => {console.log(v); return v} // for debugging
+      const state2fips = { // thanks to https://gist.github.com/wavded/1250983/bf7c1c08f7b1596ca10822baeb8049d7350b0a4b
+        "Alabama"                :  "01",
+        "Alaska"                 :  "02",
+        "Arizona"                :  "04",
+        "Arkansas"               :  "05",
+        "California"             :  "06",
+        "Colorado"               :  "08",
+        "Connecticut"            :  "09",
+        "Delaware"               :  "10",
+        "District of Columbia"   :  "11",
+        "Florida"                :  "12",
+        "Geogia"                 :  "13",
+        "Hawaii"                 :  "15",
+        "Idaho"                  :  "16",
+        "Illinois"               :  "17",
+        "Indiana"                :  "18",
+        "Iowa"                   :  "19",
+        "Kansas"                 :  "20",
+        "Kentucky"               :  "21",
+        "Louisiana"              :  "22",
+        "Maine"                  :  "23",
+        "Maryland"               :  "24",
+        "Massachusetts"          :  "25",
+        "Michigan"               :  "26",
+        "Minnesota"              :  "27",
+        "Mississippi"            :  "28",
+        "Missouri"               :  "29",
+        "Montana"                :  "30",
+        "Nebraska"               :  "31",
+        "Nevada"                 :  "32",
+        "New Hampshire"          :  "33",
+        "New Jersey"             :  "34",
+        "New Mexico"             :  "35",
+        "New York"               :  "36",
+        "North Carolina"         :  "37",
+        "North Dakota"           :  "38",
+        "Ohio"                   :  "39",
+        "Oklahoma"               :  "40",
+        "Oregon"                 :  "41",
+        "Pennsylvania"           :  "42",
+        "Rhode Island"           :  "44",
+        "South Carolina"         :  "45",
+        "South Dakota"           :  "46",
+        "Tennessee"              :  "47",
+        "Texas"                  :  "48",
+        "Utah"                   :  "49",
+        "Vermont"                :  "50",
+        "Virginia"               :  "51",
+        "Washington"             :  "53",
+        "West Virginia"          :  "54",
+        "Wisconsin"              :  "55",
+        "Wyoming"                :  "56"
+      }
+
+      let SELECTED_STATE = null  // null <==> All states
+    </script>
+    <style>
+      .d3-container {
+        position: relative;
+      }
+      #map-info {
+        background-color: white;
+        height: 100px;
+        width: 200px;
+        position: absolute;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Based off of the page
+      <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">
+        https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/
+      </a>
+    </div>
+    <h1>Gender Pay Gap in the United States</h1>
+    <h2>Gap Map</h2>
+    <div id="map" class="d3-container">
+      <div id="map-info"></div>
+    </div>
+    <script> if (true) { // simulate block scoping
+        const margin = {top: 10, right: 30, bottom: 30, left: 60};
+        const width = 660 - margin.left - margin.right;
+        const height = 500 - margin.top - margin.bottom;
+        
+        const svg = d3.select('#map')
+                      .append('svg')
+                      .attr('width', width + margin.left + margin.right)
+                      .attr('height', height + margin.top + margin.bottom)
+                      .append('g')
+                      // .attr('transform', `translate(${margin.left}, ${margin.top})`)
+
+        Promise.all([
+          d3.json("maps/us.json"), // downloaded from https://observablehq.com/@sandraviz/d3-simple-map
+          d3.csv("data/dmap.csv"), 
+        ]).then(function (res) {
+          peek(res)
+          const json = res[0]
+          const data = res[1]
+
+          const projection = d3.geoAlbersUsa()
+            .fitSize([width, height], json)
+            // .scale(500)
+            // .center([0, 0])
+            // .translate([width / 2, height / 2])
+          const geoPath = d3.geoPath(projection)
+
+          data.forEach((d) => {
+            const id = d.STATE
+            const val = +d.MED_INC_F / +d.MED_INC_M
+            json.features.forEach((state) => { // O(n^2) warning
+              if (id == state.properties.name) {
+                state.properties.ratio = val
+              }
+            })
+          })
+
+          const ratioValues = json.features.map((state) => state.properties.ratio)
+          const rVStats = {min: d3.min(ratioValues), max: d3.max(ratioValues)}
+          rVStats.mid = (rVStats.max + rVStats.min) / 2
+          const colorScale = d3.scaleLinear()
+                              .domain([rVStats.min, rVStats.mid, rVStats.max])
+                              // .range(d3.schemeBlues[3])
+                              .range(d3.schemeRdYlBu[3])
+                              peek(colorScale)
+          
+          svg.selectAll('path')
+              .data(json.features)
+              .join('path')
+                // draw each state
+                // .attr('d', d3.geoPath().projection(projection))
+                .attr('d', geoPath)
+                .attr('fill', (d) => {
+                  return colorScale(d.properties.ratio)
+                })
+                .style('stroke', 'black')
+                .on('mouseover', (e, d) => {
+                  const mapInfo = document.getElementById('map-info')
+                  mapInfo.innerText = `${d.properties.name} - ${d.properties.ratio}`
+                  mapInfo.style.visibility = 'visible'
+                })
+                .on('mouseout', (e, d) => {
+                  document.getElementById('map-info').style.visibility = 'hidden'
+                })
+                .on('click', (e, d) => {
+                  SELECTED_STATE = d.properties.name
+                  console.log(SELECTED_STATE)
+                })
+        })
+
+      };
+    </script>
+    <p>The ratio of median income of women to men of each state.</p>
+
+    <h2>Gap Diagrams</h2>
+    <div id="proportions" class="d3-container">
+      
+    </div>
+  </body>
+</html>
+
