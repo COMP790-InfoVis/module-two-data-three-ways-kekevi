@@ -1,0 +1,261 @@
+"STATE","AGE_GROUP","MED_INC_M","MED_INC_F"
+"Alabama","Under 25",14000,9800
+"Alabama","25-34",35000,29000
+"Alabama","35-44",52000,35000
+"Alabama","45-54",56000,37800
+"Alabama","55+",52000,30000
+"Alaska","Under 25",20000,12000
+"Alaska","25-34",45000,40000
+"Alaska","35-44",68000,41300
+"Alaska","45-54",71000,50000
+"Alaska","55+",57000,36000
+"Arizona","Under 25",16000,13200
+"Arizona","25-34",40000,35000
+"Arizona","35-44",55000,41000
+"Arizona","45-54",60000,42000
+"Arizona","55+",50000,35000
+"Arkansas","Under 25",15000,11400
+"Arkansas","25-34",35000,30000
+"Arkansas","35-44",50000,35000
+"Arkansas","45-54",51000,38000
+"Arkansas","55+",42000,30000
+"California","Under 25",15000,10800
+"California","25-34",42500,36900
+"California","35-44",60000,50000
+"California","45-54",65000,48000
+"California","55+",59000,40000
+"Colorado","Under 25",14000,11200
+"Colorado","25-34",48000,40000
+"Colorado","35-44",65000,49000
+"Colorado","45-54",66000,50000
+"Colorado","55+",60000,39000
+"Connecticut","Under 25",8000,7500
+"Connecticut","25-34",45000,37500
+"Connecticut","35-44",65000,50000
+"Connecticut","45-54",75000,57000
+"Connecticut","55+",65000,45000
+"Delaware","Under 25",10000,9000
+"Delaware","25-34",43000,30000
+"Delaware","35-44",55000,55000
+"Delaware","45-54",60000,50000
+"Delaware","55+",50000,36000
+"District of Columbia","Under 25",8000,6700
+"District of Columbia","25-34",74000,71000
+"District of Columbia","35-44",1e+05,90000
+"District of Columbia","45-54",1e+05,90000
+"District of Columbia","55+",75000,55000
+"Florida","Under 25",13500,11500
+"Florida","25-34",35000,32000
+"Florida","35-44",49000,38400
+"Florida","45-54",50000,39000
+"Florida","55+",46000,33000
+"Georgia","Under 25",12000,10000
+"Georgia","25-34",40000,32500
+"Georgia","35-44",50000,40000
+"Georgia","45-54",60000,41800
+"Georgia","55+",50000,35000
+"Hawaii","Under 25",19200,8600
+"Hawaii","25-34",40000,30000
+"Hawaii","35-44",60000,44000
+"Hawaii","45-54",65000,45000
+"Hawaii","55+",50000,36000
+"Idaho","Under 25",10000,10400
+"Idaho","25-34",40000,32000
+"Idaho","35-44",49500,34500
+"Idaho","45-54",55000,36000
+"Idaho","55+",45000,32000
+"Illinois","Under 25",11000,10000
+"Illinois","25-34",45000,37100
+"Illinois","35-44",60000,45000
+"Illinois","45-54",65000,48000
+"Illinois","55+",54000,35800
+"Indiana","Under 25",12000,9200
+"Indiana","25-34",41000,33000
+"Indiana","35-44",54000,38000
+"Indiana","45-54",60000,40000
+"Indiana","55+",50000,32800
+"Iowa","Under 25",10400,8000
+"Iowa","25-34",42000,35000
+"Iowa","35-44",55000,44000
+"Iowa","45-54",62000,44800
+"Iowa","55+",45500,30000
+"Kansas","Under 25",12000,8000
+"Kansas","25-34",40000,33700
+"Kansas","35-44",52000,40000
+"Kansas","45-54",60000,44000
+"Kansas","55+",50000,32000
+"Kentucky","Under 25",13300,9000
+"Kentucky","25-34",40000,30000
+"Kentucky","35-44",50000,36000
+"Kentucky","45-54",55000,39000
+"Kentucky","55+",45200,30000
+"Louisiana","Under 25",12500,8000
+"Louisiana","25-34",39400,30000
+"Louisiana","35-44",54000,35000
+"Louisiana","45-54",60000,38000
+"Louisiana","55+",50000,30000
+"Maine","Under 25",8800,7000
+"Maine","25-34",40000,36000
+"Maine","35-44",58000,42000
+"Maine","45-54",60000,43700
+"Maine","55+",46000,32000
+"Maryland","Under 25",13000,9000
+"Maryland","25-34",49000,42000
+"Maryland","35-44",68000,56000
+"Maryland","45-54",78000,60000
+"Maryland","55+",70000,50000
+"Massachusetts","Under 25",10000,8500
+"Massachusetts","25-34",51000,50000
+"Massachusetts","35-44",73000,60000
+"Massachusetts","45-54",80000,55000
+"Massachusetts","55+",65000,47800
+"Michigan","Under 25",12000,9000
+"Michigan","25-34",40000,32000
+"Michigan","35-44",55000,40000
+"Michigan","45-54",63000,41000
+"Michigan","55+",50000,32400
+"Minnesota","Under 25",12000,8800
+"Minnesota","25-34",48000,40000
+"Minnesota","35-44",62000,48000
+"Minnesota","45-54",68000,49000
+"Minnesota","55+",52000,38100
+"Mississippi","Under 25",12500,8400
+"Mississippi","25-34",35400,28000
+"Mississippi","35-44",45000,31000
+"Mississippi","45-54",50000,36700
+"Mississippi","55+",45000,30600
+"Missouri","Under 25",11000,10000
+"Missouri","25-34",40000,32000
+"Missouri","35-44",51000,40000
+"Missouri","45-54",60000,42000
+"Missouri","55+",48000,32000
+"Montana","Under 25",10700,10000
+"Montana","25-34",40000,31200
+"Montana","35-44",50000,37000
+"Montana","45-54",58000,40100
+"Montana","55+",49000,31000
+"Nebraska","Under 25",10900,8800
+"Nebraska","25-34",40000,35000
+"Nebraska","35-44",55000,40000
+"Nebraska","45-54",60000,44000
+"Nebraska","55+",50000,34000
+"Nevada","Under 25",15000,13300
+"Nevada","25-34",39300,34000
+"Nevada","35-44",48000,40000
+"Nevada","45-54",50000,40000
+"Nevada","55+",46000,36000
+"New Hampshire","Under 25",10900,9600
+"New Hampshire","25-34",49000,40000
+"New Hampshire","35-44",68000,45000
+"New Hampshire","45-54",80000,50000
+"New Hampshire","55+",64000,39700
+"New Jersey","Under 25",10000,9000
+"New Jersey","25-34",50000,42300
+"New Jersey","35-44",70000,55000
+"New Jersey","45-54",78000,52000
+"New Jersey","55+",65000,44000
+"New Mexico","Under 25",12000,8000
+"New Mexico","25-34",38000,30000
+"New Mexico","35-44",50000,37000
+"New Mexico","45-54",50000,42000
+"New Mexico","55+",44500,35000
+"New York","Under 25",10100,9000
+"New York","25-34",46000,42500
+"New York","35-44",60000,50000
+"New York","45-54",65000,50000
+"New York","55+",55000,40000
+"North Carolina","Under 25",13100,10000
+"North Carolina","25-34",40000,34500
+"North Carolina","35-44",53000,40000
+"North Carolina","45-54",56000,40000
+"North Carolina","55+",48000,32300
+"North Dakota","Under 25",10000,11500
+"North Dakota","25-34",50000,39600
+"North Dakota","35-44",54000,41700
+"North Dakota","45-54",65000,50000
+"North Dakota","55+",50000,32900
+"Ohio","Under 25",12100,9500
+"Ohio","25-34",40000,34000
+"Ohio","35-44",55000,40000
+"Ohio","45-54",60000,40400
+"Ohio","55+",50000,33000
+"Oklahoma","Under 25",14400,9200
+"Oklahoma","25-34",37000,30000
+"Oklahoma","35-44",50000,35000
+"Oklahoma","45-54",55000,38000
+"Oklahoma","55+",50000,33800
+"Oregon","Under 25",10200,10000
+"Oregon","25-34",40000,35400
+"Oregon","35-44",57000,47200
+"Oregon","45-54",62000,45000
+"Oregon","55+",52000,35000
+"Pennsylvania","Under 25",9800,7500
+"Pennsylvania","25-34",45000,36500
+"Pennsylvania","35-44",60000,45000
+"Pennsylvania","45-54",65000,45000
+"Pennsylvania","55+",52000,35000
+"Rhode Island","Under 25",9400,6500
+"Rhode Island","25-34",40000,35000
+"Rhode Island","35-44",60000,50000
+"Rhode Island","45-54",65000,50000
+"Rhode Island","55+",60000,40000
+"South Carolina","Under 25",12000,9000
+"South Carolina","25-34",40000,32000
+"South Carolina","35-44",51000,37000
+"South Carolina","45-54",55000,38000
+"South Carolina","55+",49500,32000
+"South Dakota","Under 25",11000,8900
+"South Dakota","25-34",39300,33000
+"South Dakota","35-44",55000,40000
+"South Dakota","45-54",58000,45000
+"South Dakota","55+",50000,35000
+"Tennessee","Under 25",13700,9000
+"Tennessee","25-34",38500,32000
+"Tennessee","35-44",50000,36000
+"Tennessee","45-54",55000,40000
+"Tennessee","55+",48000,33900
+"Texas","Under 25",14400,10200
+"Texas","25-34",40000,34800
+"Texas","35-44",56000,40000
+"Texas","45-54",60000,40000
+"Texas","55+",52000,33300
+"Utah","Under 25",14000,9600
+"Utah","25-34",44000,32000
+"Utah","35-44",65000,35000
+"Utah","45-54",68000,38000
+"Utah","55+",60000,34000
+"Vermont","Under 25",8100,6000
+"Vermont","25-34",36800,40000
+"Vermont","35-44",52000,47000
+"Vermont","45-54",59000,50000
+"Vermont","55+",42000,38000
+"Virginia","Under 25",12600,8500
+"Virginia","25-34",45000,40000
+"Virginia","35-44",65000,47000
+"Virginia","45-54",75000,50000
+"Virginia","55+",60000,39800
+"Washington","Under 25",15000,12000
+"Washington","25-34",50000,40000
+"Washington","35-44",70000,49000
+"Washington","45-54",80000,50000
+"Washington","55+",61000,41700
+"West Virginia","Under 25",10500,10000
+"West Virginia","25-34",33300,25200
+"West Virginia","35-44",48000,39000
+"West Virginia","45-54",57000,35000
+"West Virginia","55+",45000,30000
+"Wisconsin","Under 25",12000,9000
+"Wisconsin","25-34",45000,36000
+"Wisconsin","35-44",55000,43000
+"Wisconsin","45-54",60000,45000
+"Wisconsin","55+",50000,32600
+"Wyoming","Under 25",11300,8000
+"Wyoming","25-34",40000,30000
+"Wyoming","35-44",60000,35000
+"Wyoming","45-54",60000,37000
+"Wyoming","55+",50000,32100
+"United States","Under 25",12000,10000
+"United States","25-34",41000,35000
+"United States","35-44",58000,42000
+"United States","45-54",62000,44000
+"United States","55+",52000,35600

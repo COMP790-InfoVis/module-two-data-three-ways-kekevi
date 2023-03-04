@@ -193,10 +193,35 @@ write.table(dmap %>% pivot_sex, file = "dmap.csv", sep=",", row.names = F)
 dmaprace = d %>% select(-AGE_GROUP, -INDUSTRY) %>%
   group_by(STATE, SEX, RACE, INCWAGE) %>%
   summarize(COUNT = sum(COUNT)) %>%
+  ungroup() 
+
+nationwide = dmaprace %>% 
+  group_by(SEX, RACE) %>% 
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>% 
   ungroup() %>%
+  mutate(STATE = 'United States')
+  
+dmaprace = dmaprace %>%
   group_by(STATE, SEX, RACE) %>%
   summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
-  ungroup()
+  ungroup() %>%
+  bind_rows(nationwide)
+
+raceInt2Label = function (RACE) {
+  case_when(
+    RACE == 1 ~ 'White', 
+    RACE == 2 ~ 'Black/African American', 
+    RACE == 3 ~ 'American Indian/Alaska Native', 
+    RACE == 4 ~ 'Asian', 
+    RACE == 7 ~ 'Mixed/Other', 
+    RACE == 10 ~ 'Hispanic'
+  )
+}
+
+write.table(dmaprace %>% 
+              pivot_sex %>% 
+              mutate(RACE = raceInt2Label(RACE)), 
+            file = "dmaprace.csv", sep=",", row.names = F)
 ```
 
 ## Wages by State and Sex and Industry
@@ -204,10 +229,21 @@ dmaprace = d %>% select(-AGE_GROUP, -INDUSTRY) %>%
 dmapindustry = d %>% select(-AGE_GROUP, -RACE) %>%
   group_by(STATE, SEX, INDUSTRY, INCWAGE) %>%
   summarize(COUNT = sum(COUNT)) %>%
+  ungroup()
+
+nationwide = dmapindustry %>% 
+  group_by(SEX, INDUSTRY) %>% 
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>% 
   ungroup() %>%
+  mutate(STATE = 'United States')
+  
+dmapindustry = dmapindustry %>%
   group_by(STATE, SEX, INDUSTRY) %>%
   summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
-  ungroup()
+  ungroup() %>%
+  bind_rows(nationwide)
+
+write.table(dmapindustry %>% pivot_sex, file = "dmapindustry.csv", sep=",", row.names = F)
 ```
 
 ## Wages by State and Sex and Age Group
@@ -215,8 +251,47 @@ dmapindustry = d %>% select(-AGE_GROUP, -RACE) %>%
 dmapages = d %>% select(-INDUSTRY, -RACE) %>%
   group_by(STATE, SEX, AGE_GROUP, INCWAGE) %>%
   summarize(COUNT = sum(COUNT)) %>%
+  ungroup()
+
+nationwide = dmapages %>% 
+  group_by(SEX, AGE_GROUP) %>% 
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>% 
   ungroup() %>%
+  mutate(STATE = 'United States')
+  
+dmapages = dmapages %>%
   group_by(STATE, SEX, AGE_GROUP) %>%
   summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
-  ungroup()
+  ungroup() %>%
+  bind_rows(nationwide)
+
+ages2labels = function(d) {
+  case_when(
+    d == 0 ~ "Under 25",
+    d == 25 ~ "25-34",
+    d == 35 ~ "35-44",
+    d == 45 ~ "45-54",
+    d == 55 ~ "55+"
+  )
+}
+
+write.table(dmapages %>% pivot_sex %>% mutate(AGE_GROUP = ages2labels(AGE_GROUP)), file = "dmapages.csv", sep=",", row.names = F)
+```
+
+## Wages by Race relative to White Men
+```{r}
+# find median income of all (employed/working) white men
+MED_WHITE = ( d %>% filter(RACE == 1, SEX == 1) %>% summarize(MED_WHITE = median(rep(INCWAGE, COUNT))) )[[1,1]]
+
+dwhitemen = d %>% select(-STATE, -INDUSTRY) %>%
+  group_by(SEX, RACE, INCWAGE) %>%
+  summarize(COUNT = sum(COUNT)) %>%
+  ungroup() %>%
+  group_by(SEX, RACE) %>%
+  summarize(MED_INC = median(rep(INCWAGE, COUNT))) %>%
+  ungroup() %>%
+  mutate(RACE = raceInt2Label(RACE)) %>%
+  arrange(MED_INC)
+
+write.table(dwhitemen, file = "dwhitemen.csv", sep=",", row.names = F)
 ```

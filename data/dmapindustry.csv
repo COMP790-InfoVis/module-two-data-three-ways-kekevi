@@ -1,0 +1,1039 @@
+"STATE","INDUSTRY","MED_INC_M","MED_INC_F"
+"Alabama","Administration",25000,20000
+"Alabama","Agriculture",40000,28000
+"Alabama","Arts",20000,15000
+"Alabama","Banking/Insurance",80000,39400
+"Alabama","Construction",40000,38000
+"Alabama","Education",50000,35000
+"Alabama","Food/Lodging",12600,10500
+"Alabama","Government",60000,42000
+"Alabama","Healthcare",50000,30700
+"Alabama","Management",110000,5000
+"Alabama","Manufacturing",45000,31000
+"Alabama","Media",49900,39000
+"Alabama","Mining",60000,74000
+"Alabama","Others",36800,19500
+"Alabama","Real Estate/Lending",42000,36000
+"Alabama","Retail",28000,16000
+"Alabama","Science/Tech",80000,40600
+"Alabama","Transportation",41300,26000
+"Alabama","Utilities",70000,48000
+"Alabama","Wholesale Trade",50000,35000
+"Alaska","Administration",35000,34000
+"Alaska","Agriculture",28000,11700
+"Alaska","Arts",24000,20000
+"Alaska","Banking/Insurance",42000,61000
+"Alaska","Construction",68000,40000
+"Alaska","Education",61000,40000
+"Alaska","Food/Lodging",15000,16600
+"Alaska","Government",50000,50000
+"Alaska","Healthcare",50000,40000
+"Alaska","Management",44800,29200
+"Alaska","Manufacturing",36800,25000
+"Alaska","Media",52000,32000
+"Alaska","Mining",112000,45000
+"Alaska","Others",50000,35000
+"Alaska","Real Estate/Lending",40000,50000
+"Alaska","Retail",38000,26000
+"Alaska","Science/Tech",70000,68000
+"Alaska","Transportation",65000,38000
+"Alaska","Utilities",151000,81000
+"Alaska","Wholesale Trade",57000,26000
+"Arizona","Administration",30000,30000
+"Arizona","Agriculture",34300,15600
+"Arizona","Arts",26500,20000
+"Arizona","Banking/Insurance",72000,50000
+"Arizona","Construction",42000,36000
+"Arizona","Education",42000,38000
+"Arizona","Food/Lodging",19000,15000
+"Arizona","Government",56000,45000
+"Arizona","Healthcare",50000,36000
+"Arizona","Management",75000,53000
+"Arizona","Manufacturing",57000,40000
+"Arizona","Media",50000,38000
+"Arizona","Mining",70000,62000
+"Arizona","Others",38000,23000
+"Arizona","Real Estate/Lending",50000,43000
+"Arizona","Retail",30000,23000
+"Arizona","Science/Tech",73000,50000
+"Arizona","Transportation",40000,30000
+"Arizona","Utilities",75000,53000
+"Arizona","Wholesale Trade",50000,36000
+"Arkansas","Administration",28000,23000
+"Arkansas","Agriculture",31000,26000
+"Arkansas","Arts",12500,10000
+"Arkansas","Banking/Insurance",60000,40000
+"Arkansas","Construction",35000,31200
+"Arkansas","Education",42000,36000
+"Arkansas","Food/Lodging",16650,12000
+"Arkansas","Government",45000,34400
+"Arkansas","Healthcare",41000,30300
+"Arkansas","Management",18200,75000
+"Arkansas","Manufacturing",40000,31500
+"Arkansas","Media",60000,30000
+"Arkansas","Mining",37000,104000
+"Arkansas","Others",30000,20000
+"Arkansas","Real Estate/Lending",37000,40000
+"Arkansas","Retail",31200,24400
+"Arkansas","Science/Tech",60000,38000
+"Arkansas","Transportation",50000,35000
+"Arkansas","Utilities",65000,48000
+"Arkansas","Wholesale Trade",51000,35400
+"California","Administration",34000,28000
+"California","Agriculture",28000,16200
+"California","Arts",30000,21000
+"California","Banking/Insurance",97000,60000
+"California","Construction",48000,42000
+"California","Education",54000,45000
+"California","Food/Lodging",20000,14600
+"California","Government",70000,55000
+"California","Healthcare",59000,40000
+"California","Management",80000,66000
+"California","Manufacturing",60000,44000
+"California","Media",93000,72000
+"California","Mining",70000,60000
+"California","Others",35000,22100
+"California","Real Estate/Lending",49000,43700
+"California","Retail",31000,23400
+"California","Science/Tech",1e+05,70000
+"California","Transportation",38000,30000
+"California","Utilities",1e+05,80000
+"California","Wholesale Trade",50000,36000
+"Colorado","Administration",40000,28000
+"Colorado","Agriculture",30000,23500
+"Colorado","Arts",25000,10000
+"Colorado","Banking/Insurance",93000,55000
+"Colorado","Construction",49000,45000
+"Colorado","Education",45000,40000
+"Colorado","Food/Lodging",18000,14800
+"Colorado","Government",65000,55000
+"Colorado","Healthcare",59000,40000
+"Colorado","Management",60000,30000
+"Colorado","Manufacturing",62000,45000
+"Colorado","Media",78000,50000
+"Colorado","Mining",70000,78000
+"Colorado","Others",40000,24000
+"Colorado","Real Estate/Lending",50000,47000
+"Colorado","Retail",30000,20000
+"Colorado","Science/Tech",90000,62000
+"Colorado","Transportation",40000,30000
+"Colorado","Utilities",73000,66000
+"Colorado","Wholesale Trade",60000,50000
+"Connecticut","Administration",30000,24000
+"Connecticut","Agriculture",28000,14900
+"Connecticut","Arts",13300,14100
+"Connecticut","Banking/Insurance",115000,70000
+"Connecticut","Construction",46800,45000
+"Connecticut","Education",58000,49700
+"Connecticut","Food/Lodging",10300,9400
+"Connecticut","Government",68000,68000
+"Connecticut","Healthcare",60000,40000
+"Connecticut","Management",155000,59000
+"Connecticut","Manufacturing",65000,55000
+"Connecticut","Media",79000,55000
+"Connecticut","Mining",1e+05,22000
+"Connecticut","Others",42000,25000
+"Connecticut","Real Estate/Lending",45000,46000
+"Connecticut","Retail",28000,19000
+"Connecticut","Science/Tech",95000,60000
+"Connecticut","Transportation",40000,26000
+"Connecticut","Utilities",90000,67000
+"Connecticut","Wholesale Trade",60000,60000
+"Delaware","Administration",23000,23000
+"Delaware","Agriculture",40000,13000
+"Delaware","Arts",23500,14100
+"Delaware","Banking/Insurance",76000,60000
+"Delaware","Construction",46500,35000
+"Delaware","Education",48000,47900
+"Delaware","Food/Lodging",12000,10000
+"Delaware","Government",55000,46000
+"Delaware","Healthcare",52000,40000
+"Delaware","Management",50000,115000
+"Delaware","Manufacturing",58000,30000
+"Delaware","Media",59000,43000
+"Delaware","Mining",63000,NA
+"Delaware","Others",36700,15000
+"Delaware","Real Estate/Lending",51000,35000
+"Delaware","Retail",28000,20000
+"Delaware","Science/Tech",81000,60000
+"Delaware","Transportation",42000,24400
+"Delaware","Utilities",70000,1e+05
+"Delaware","Wholesale Trade",42000,63000
+"District of Columbia","Administration",32300,31200
+"District of Columbia","Agriculture",8000,52000
+"District of Columbia","Arts",25000,6500
+"District of Columbia","Banking/Insurance",133000,75000
+"District of Columbia","Construction",30500,74000
+"District of Columbia","Education",60000,55000
+"District of Columbia","Food/Lodging",23000,9000
+"District of Columbia","Government",1e+05,94000
+"District of Columbia","Healthcare",36000,60000
+"District of Columbia","Management",70000,160000
+"District of Columbia","Manufacturing",116000,82000
+"District of Columbia","Media",90000,105000
+"District of Columbia","Others",79000,70000
+"District of Columbia","Real Estate/Lending",75000,72000
+"District of Columbia","Retail",28000,21000
+"District of Columbia","Science/Tech",103000,96000
+"District of Columbia","Transportation",32000,55000
+"District of Columbia","Utilities",50000,160000
+"District of Columbia","Wholesale Trade",62000,90000
+"Florida","Administration",28900,25000
+"Florida","Agriculture",34600,15000
+"Florida","Arts",30000,22000
+"Florida","Banking/Insurance",70000,50000
+"Florida","Construction",40000,37000
+"Florida","Education",43000,40000
+"Florida","Food/Lodging",20000,15000
+"Florida","Government",55000,41800
+"Florida","Healthcare",50000,35000
+"Florida","Management",52000,55000
+"Florida","Manufacturing",50000,35000
+"Florida","Media",56000,41000
+"Florida","Mining",60000,36000
+"Florida","Others",34000,22500
+"Florida","Real Estate/Lending",40000,35500
+"Florida","Retail",28800,21600
+"Florida","Science/Tech",70000,45000
+"Florida","Transportation",38000,30000
+"Florida","Utilities",65000,53000
+"Florida","Wholesale Trade",50000,41300
+"Georgia","Administration",30000,24500
+"Georgia","Agriculture",28100,20000
+"Georgia","Arts",20000,11000
+"Georgia","Banking/Insurance",80000,50000
+"Georgia","Construction",38000,32000
+"Georgia","Education",47000,40000
+"Georgia","Food/Lodging",13400,12000
+"Georgia","Government",51000,42000
+"Georgia","Healthcare",50000,36000
+"Georgia","Management",70000,60000
+"Georgia","Manufacturing",45000,34200
+"Georgia","Media",75000,50000
+"Georgia","Mining",59000,50000
+"Georgia","Others",35000,22000
+"Georgia","Real Estate/Lending",50000,40000
+"Georgia","Retail",30000,20000
+"Georgia","Science/Tech",84000,50000
+"Georgia","Transportation",40000,27000
+"Georgia","Utilities",74000,51000
+"Georgia","Wholesale Trade",50000,45000
+"Hawaii","Administration",33000,30000
+"Hawaii","Agriculture",31400,20000
+"Hawaii","Arts",20000,14400
+"Hawaii","Banking/Insurance",80000,50000
+"Hawaii","Construction",53000,44000
+"Hawaii","Education",50000,40000
+"Hawaii","Food/Lodging",21000,18000
+"Hawaii","Government",60000,48000
+"Hawaii","Healthcare",68000,40700
+"Hawaii","Management",71000,NA
+"Hawaii","Manufacturing",65000,40000
+"Hawaii","Media",60000,64000
+"Hawaii","Others",30000,25000
+"Hawaii","Real Estate/Lending",42000,40000
+"Hawaii","Retail",30000,22600
+"Hawaii","Science/Tech",85000,43000
+"Hawaii","Transportation",48000,32000
+"Hawaii","Utilities",97000,63000
+"Hawaii","Wholesale Trade",50000,30000
+"Idaho","Administration",28000,23000
+"Idaho","Agriculture",38000,17000
+"Idaho","Arts",13200,11000
+"Idaho","Banking/Insurance",60000,40000
+"Idaho","Construction",40000,22000
+"Idaho","Education",40000,30000
+"Idaho","Food/Lodging",11500,11000
+"Idaho","Government",50000,50000
+"Idaho","Healthcare",49000,30000
+"Idaho","Management",92000,75000
+"Idaho","Manufacturing",43000,37000
+"Idaho","Media",50000,40000
+"Idaho","Mining",60000,115000
+"Idaho","Others",40000,18000
+"Idaho","Real Estate/Lending",34000,35600
+"Idaho","Retail",28000,20000
+"Idaho","Science/Tech",70000,40300
+"Idaho","Transportation",35000,20000
+"Idaho","Utilities",95000,68000
+"Idaho","Wholesale Trade",47000,34000
+"Illinois","Administration",32800,26000
+"Illinois","Agriculture",38000,31600
+"Illinois","Arts",18000,11700
+"Illinois","Banking/Insurance",95000,55000
+"Illinois","Construction",50000,45000
+"Illinois","Education",50000,40000
+"Illinois","Food/Lodging",15000,12000
+"Illinois","Government",68000,52000
+"Illinois","Healthcare",50000,35100
+"Illinois","Management",47500,50000
+"Illinois","Manufacturing",50000,40000
+"Illinois","Media",70000,43000
+"Illinois","Mining",70000,64000
+"Illinois","Others",40000,25000
+"Illinois","Real Estate/Lending",52000,40000
+"Illinois","Retail",29000,20000
+"Illinois","Science/Tech",85000,59000
+"Illinois","Transportation",40000,32000
+"Illinois","Utilities",90000,71000
+"Illinois","Wholesale Trade",55000,50000
+"Indiana","Administration",29200,22500
+"Indiana","Agriculture",36000,20800
+"Indiana","Arts",19000,15000
+"Indiana","Banking/Insurance",70000,45000
+"Indiana","Construction",48000,33000
+"Indiana","Education",45000,35100
+"Indiana","Food/Lodging",12500,10000
+"Indiana","Government",58000,40000
+"Indiana","Healthcare",50000,35000
+"Indiana","Management",70000,40000
+"Indiana","Manufacturing",50000,38400
+"Indiana","Media",55000,38700
+"Indiana","Mining",55000,33000
+"Indiana","Others",40000,24000
+"Indiana","Real Estate/Lending",50000,38600
+"Indiana","Retail",27000,20000
+"Indiana","Science/Tech",75000,45000
+"Indiana","Transportation",43000,30000
+"Indiana","Utilities",75000,60000
+"Indiana","Wholesale Trade",50000,41600
+"Iowa","Administration",23800,25000
+"Iowa","Agriculture",35000,30000
+"Iowa","Arts",12000,7000
+"Iowa","Banking/Insurance",80000,50000
+"Iowa","Construction",45000,35000
+"Iowa","Education",42000,37000
+"Iowa","Food/Lodging",12000,8000
+"Iowa","Government",59000,48000
+"Iowa","Healthcare",45000,33000
+"Iowa","Management",150000,46000
+"Iowa","Manufacturing",48400,38500
+"Iowa","Media",40000,30000
+"Iowa","Mining",57000,47000
+"Iowa","Others",40000,19000
+"Iowa","Real Estate/Lending",35000,45000
+"Iowa","Retail",30000,18000
+"Iowa","Science/Tech",70000,42700
+"Iowa","Transportation",50000,31000
+"Iowa","Utilities",70000,48000
+"Iowa","Wholesale Trade",52000,40000
+"Kansas","Administration",30000,22000
+"Kansas","Agriculture",33200,9000
+"Kansas","Arts",12000,7500
+"Kansas","Banking/Insurance",63000,50000
+"Kansas","Construction",40000,33000
+"Kansas","Education",47000,30000
+"Kansas","Food/Lodging",12800,8300
+"Kansas","Government",46000,40000
+"Kansas","Healthcare",45000,33000
+"Kansas","Management",70000,87000
+"Kansas","Manufacturing",50000,37500
+"Kansas","Media",60000,42000
+"Kansas","Mining",52000,40000
+"Kansas","Others",30000,21100
+"Kansas","Real Estate/Lending",40000,35000
+"Kansas","Retail",28800,17000
+"Kansas","Science/Tech",72000,52000
+"Kansas","Transportation",42000,28900
+"Kansas","Utilities",85000,52000
+"Kansas","Wholesale Trade",50000,40000
+"Kentucky","Administration",30000,27400
+"Kentucky","Agriculture",34000,36000
+"Kentucky","Arts",14000,12700
+"Kentucky","Banking/Insurance",71000,41700
+"Kentucky","Construction",40000,31200
+"Kentucky","Education",42000,35800
+"Kentucky","Food/Lodging",10000,10000
+"Kentucky","Government",48000,40000
+"Kentucky","Healthcare",46500,34000
+"Kentucky","Management",68000,65000
+"Kentucky","Manufacturing",50000,35300
+"Kentucky","Media",50000,30000
+"Kentucky","Mining",50000,35000
+"Kentucky","Others",30000,23600
+"Kentucky","Real Estate/Lending",31200,30000
+"Kentucky","Retail",25000,17600
+"Kentucky","Science/Tech",67000,40000
+"Kentucky","Transportation",40000,25000
+"Kentucky","Utilities",62000,60000
+"Kentucky","Wholesale Trade",50000,41000
+"Louisiana","Administration",25000,21600
+"Louisiana","Agriculture",30000,22000
+"Louisiana","Arts",26000,12000
+"Louisiana","Banking/Insurance",65000,40000
+"Louisiana","Construction",40000,30000
+"Louisiana","Education",43000,36200
+"Louisiana","Food/Lodging",17000,13000
+"Louisiana","Government",52000,41600
+"Louisiana","Healthcare",55000,30500
+"Louisiana","Management",130000,40000
+"Louisiana","Manufacturing",60000,40400
+"Louisiana","Media",45000,30000
+"Louisiana","Mining",70000,43000
+"Louisiana","Others",36000,20000
+"Louisiana","Real Estate/Lending",45000,30000
+"Louisiana","Retail",25000,17000
+"Louisiana","Science/Tech",75000,40100
+"Louisiana","Transportation",40000,22000
+"Louisiana","Utilities",75000,50000
+"Louisiana","Wholesale Trade",45000,36200
+"Maine","Administration",35000,23500
+"Maine","Agriculture",30000,20000
+"Maine","Arts",13800,12300
+"Maine","Banking/Insurance",70000,50000
+"Maine","Construction",42700,40000
+"Maine","Education",42000,38000
+"Maine","Food/Lodging",18800,10000
+"Maine","Government",65000,42000
+"Maine","Healthcare",45000,35000
+"Maine","Management",60000,50000
+"Maine","Manufacturing",50000,38000
+"Maine","Media",48000,40000
+"Maine","Mining",136000,NA
+"Maine","Others",40000,31000
+"Maine","Real Estate/Lending",22000,27000
+"Maine","Retail",30000,21100
+"Maine","Science/Tech",75000,51000
+"Maine","Transportation",45000,25000
+"Maine","Utilities",80000,50000
+"Maine","Wholesale Trade",50000,39900
+"Maryland","Administration",40000,30000
+"Maryland","Agriculture",25000,25800
+"Maryland","Arts",20000,12000
+"Maryland","Banking/Insurance",94000,62000
+"Maryland","Construction",50000,46000
+"Maryland","Education",56000,48000
+"Maryland","Food/Lodging",16800,12100
+"Maryland","Government",86000,85000
+"Maryland","Healthcare",50000,42000
+"Maryland","Management",69000,1e+05
+"Maryland","Manufacturing",65000,58000
+"Maryland","Media",80000,55000
+"Maryland","Mining",90000,42000
+"Maryland","Others",45000,32000
+"Maryland","Real Estate/Lending",56000,52000
+"Maryland","Retail",27100,17000
+"Maryland","Science/Tech",105000,72000
+"Maryland","Transportation",40000,30000
+"Maryland","Utilities",93000,75000
+"Maryland","Wholesale Trade",50000,40000
+"Massachusetts","Administration",36000,28800
+"Massachusetts","Agriculture",39000,25000
+"Massachusetts","Arts",13800,10400
+"Massachusetts","Banking/Insurance",1e+05,70000
+"Massachusetts","Construction",52000,45000
+"Massachusetts","Education",55000,51000
+"Massachusetts","Food/Lodging",20000,10000
+"Massachusetts","Government",75000,63000
+"Massachusetts","Healthcare",60000,44900
+"Massachusetts","Management",62000,70000
+"Massachusetts","Manufacturing",68000,56000
+"Massachusetts","Media",82000,55000
+"Massachusetts","Mining",76000,25000
+"Massachusetts","Others",35000,29000
+"Massachusetts","Real Estate/Lending",60000,50000
+"Massachusetts","Retail",31900,20000
+"Massachusetts","Science/Tech",1e+05,71000
+"Massachusetts","Transportation",40000,27400
+"Massachusetts","Utilities",88000,82000
+"Massachusetts","Wholesale Trade",61000,50000
+"Michigan","Administration",30000,23500
+"Michigan","Agriculture",33000,20000
+"Michigan","Arts",13300,10600
+"Michigan","Banking/Insurance",71000,45000
+"Michigan","Construction",40000,30000
+"Michigan","Education",44000,38000
+"Michigan","Food/Lodging",12100,9000
+"Michigan","Government",60000,47000
+"Michigan","Healthcare",53000,35000
+"Michigan","Management",92000,60000
+"Michigan","Manufacturing",55000,38000
+"Michigan","Media",47000,29000
+"Michigan","Mining",66000,28500
+"Michigan","Others",35000,20000
+"Michigan","Real Estate/Lending",32600,33000
+"Michigan","Retail",26500,18000
+"Michigan","Science/Tech",73000,50000
+"Michigan","Transportation",40000,27000
+"Michigan","Utilities",88000,60000
+"Michigan","Wholesale Trade",52000,36000
+"Minnesota","Administration",35000,32000
+"Minnesota","Agriculture",36000,25000
+"Minnesota","Arts",15000,9200
+"Minnesota","Banking/Insurance",85000,57000
+"Minnesota","Construction",53000,45000
+"Minnesota","Education",49500,38000
+"Minnesota","Food/Lodging",13000,10000
+"Minnesota","Government",68000,56000
+"Minnesota","Healthcare",48000,40000
+"Minnesota","Management",110000,70000
+"Minnesota","Manufacturing",55000,43700
+"Minnesota","Media",60000,40600
+"Minnesota","Mining",70000,50000
+"Minnesota","Others",38000,21300
+"Minnesota","Real Estate/Lending",38000,41000
+"Minnesota","Retail",32000,21000
+"Minnesota","Science/Tech",80000,59000
+"Minnesota","Transportation",45000,30000
+"Minnesota","Utilities",86000,60000
+"Minnesota","Wholesale Trade",57000,46000
+"Mississippi","Administration",26900,20500
+"Mississippi","Agriculture",30000,27000
+"Mississippi","Arts",19500,20000
+"Mississippi","Banking/Insurance",57000,38000
+"Mississippi","Construction",35000,30000
+"Mississippi","Education",43000,36000
+"Mississippi","Food/Lodging",12000,10600
+"Mississippi","Government",43000,37000
+"Mississippi","Healthcare",50000,31800
+"Mississippi","Management",358000,11200
+"Mississippi","Manufacturing",42500,30000
+"Mississippi","Media",50000,25000
+"Mississippi","Mining",75000,34600
+"Mississippi","Others",40000,18200
+"Mississippi","Real Estate/Lending",21000,28000
+"Mississippi","Retail",22000,17100
+"Mississippi","Science/Tech",50000,30900
+"Mississippi","Transportation",45000,26000
+"Mississippi","Utilities",75000,38000
+"Mississippi","Wholesale Trade",48000,30000
+"Missouri","Administration",37000,24000
+"Missouri","Agriculture",30000,22300
+"Missouri","Arts",25000,12000
+"Missouri","Banking/Insurance",77000,45000
+"Missouri","Construction",45000,40000
+"Missouri","Education",42000,36000
+"Missouri","Food/Lodging",12000,12700
+"Missouri","Government",51000,36000
+"Missouri","Healthcare",45000,32400
+"Missouri","Management",77000,55000
+"Missouri","Manufacturing",50000,40000
+"Missouri","Media",50000,33300
+"Missouri","Mining",62000,60000
+"Missouri","Others",32000,24000
+"Missouri","Real Estate/Lending",45000,39000
+"Missouri","Retail",28800,18700
+"Missouri","Science/Tech",72000,47000
+"Missouri","Transportation",44000,28000
+"Missouri","Utilities",72000,54000
+"Missouri","Wholesale Trade",54000,42000
+"Montana","Administration",25000,13000
+"Montana","Agriculture",30000,30000
+"Montana","Arts",22000,10000
+"Montana","Banking/Insurance",78000,36500
+"Montana","Construction",46000,20000
+"Montana","Education",42000,35400
+"Montana","Food/Lodging",12000,13300
+"Montana","Government",50000,42000
+"Montana","Healthcare",60000,34000
+"Montana","Management",8800,40000
+"Montana","Manufacturing",46100,30000
+"Montana","Media",42000,40000
+"Montana","Mining",84000,93000
+"Montana","Others",36000,25000
+"Montana","Real Estate/Lending",41400,35000
+"Montana","Retail",25000,22000
+"Montana","Science/Tech",60000,40000
+"Montana","Transportation",40000,30000
+"Montana","Utilities",60000,56000
+"Montana","Wholesale Trade",45200,30000
+"Nebraska","Administration",35000,24900
+"Nebraska","Agriculture",36000,15000
+"Nebraska","Arts",10000,8200
+"Nebraska","Banking/Insurance",70000,43700
+"Nebraska","Construction",43600,38000
+"Nebraska","Education",43000,35000
+"Nebraska","Food/Lodging",12000,10000
+"Nebraska","Government",60000,45000
+"Nebraska","Healthcare",48000,36000
+"Nebraska","Manufacturing",45000,38000
+"Nebraska","Media",57000,35000
+"Nebraska","Mining",67000,600
+"Nebraska","Others",40000,21900
+"Nebraska","Real Estate/Lending",40000,49000
+"Nebraska","Retail",27700,20000
+"Nebraska","Science/Tech",70000,41000
+"Nebraska","Transportation",56000,30000
+"Nebraska","Utilities",79000,58000
+"Nebraska","Wholesale Trade",52000,40000
+"Nebraska","Management",NA,48000
+"Nevada","Administration",27000,28800
+"Nevada","Agriculture",41500,25000
+"Nevada","Arts",30000,30000
+"Nevada","Banking/Insurance",65000,43000
+"Nevada","Construction",48000,40000
+"Nevada","Education",49400,42000
+"Nevada","Food/Lodging",24700,20000
+"Nevada","Government",62000,52000
+"Nevada","Healthcare",48000,40000
+"Nevada","Management",30000,53000
+"Nevada","Manufacturing",50000,36000
+"Nevada","Media",52000,40000
+"Nevada","Mining",88000,1e+05
+"Nevada","Others",38000,25000
+"Nevada","Real Estate/Lending",48000,40000
+"Nevada","Retail",28000,22000
+"Nevada","Science/Tech",69000,40000
+"Nevada","Transportation",35000,30000
+"Nevada","Utilities",85000,70000
+"Nevada","Wholesale Trade",45000,40000
+"New Hampshire","Administration",38000,30000
+"New Hampshire","Agriculture",34000,30000
+"New Hampshire","Arts",7500,4500
+"New Hampshire","Banking/Insurance",105000,53000
+"New Hampshire","Construction",58000,45000
+"New Hampshire","Education",46300,43000
+"New Hampshire","Food/Lodging",15000,11000
+"New Hampshire","Government",70000,51000
+"New Hampshire","Healthcare",60000,38200
+"New Hampshire","Management",98000,80000
+"New Hampshire","Manufacturing",61000,42000
+"New Hampshire","Media",71000,53000
+"New Hampshire","Mining",60000,36400
+"New Hampshire","Others",40000,35000
+"New Hampshire","Real Estate/Lending",55000,39900
+"New Hampshire","Retail",32900,24000
+"New Hampshire","Science/Tech",1e+05,50000
+"New Hampshire","Transportation",52000,35400
+"New Hampshire","Utilities",90000,90000
+"New Hampshire","Wholesale Trade",58000,50000
+"New Jersey","Administration",37000,26000
+"New Jersey","Agriculture",48000,19500
+"New Jersey","Arts",16000,10000
+"New Jersey","Banking/Insurance",127000,75000
+"New Jersey","Construction",50000,40000
+"New Jersey","Education",60000,55000
+"New Jersey","Food/Lodging",15800,10000
+"New Jersey","Government",72000,60000
+"New Jersey","Healthcare",60000,40000
+"New Jersey","Management",105000,70000
+"New Jersey","Manufacturing",68000,57000
+"New Jersey","Media",1e+05,70000
+"New Jersey","Mining",95000,4000
+"New Jersey","Others",35000,20000
+"New Jersey","Real Estate/Lending",65000,47800
+"New Jersey","Retail",30000,23000
+"New Jersey","Science/Tech",1e+05,61000
+"New Jersey","Transportation",43000,30000
+"New Jersey","Utilities",90000,66000
+"New Jersey","Wholesale Trade",61000,43000
+"New Mexico","Administration",28000,22800
+"New Mexico","Agriculture",28000,15600
+"New Mexico","Arts",26300,20000
+"New Mexico","Banking/Insurance",41000,37000
+"New Mexico","Construction",45000,36000
+"New Mexico","Education",43000,36000
+"New Mexico","Food/Lodging",11100,12000
+"New Mexico","Government",50000,50000
+"New Mexico","Healthcare",42000,32000
+"New Mexico","Management",51000,50000
+"New Mexico","Manufacturing",45000,34000
+"New Mexico","Media",42000,32000
+"New Mexico","Mining",60000,45000
+"New Mexico","Others",30000,18800
+"New Mexico","Real Estate/Lending",36000,47800
+"New Mexico","Retail",20000,18000
+"New Mexico","Science/Tech",80000,45000
+"New Mexico","Transportation",40000,15000
+"New Mexico","Utilities",63000,40000
+"New Mexico","Wholesale Trade",40000,26000
+"New York","Administration",33000,29000
+"New York","Agriculture",28600,24000
+"New York","Arts",20000,16000
+"New York","Banking/Insurance",110000,68000
+"New York","Construction",48000,40000
+"New York","Education",55000,50000
+"New York","Food/Lodging",19500,12000
+"New York","Government",70000,55000
+"New York","Healthcare",50000,40000
+"New York","Management",89000,55000
+"New York","Manufacturing",52000,44500
+"New York","Media",75000,60000
+"New York","Mining",60000,70000
+"New York","Others",35000,26800
+"New York","Real Estate/Lending",50000,44000
+"New York","Retail",28000,20000
+"New York","Science/Tech",88000,60000
+"New York","Transportation",40000,30000
+"New York","Utilities",90000,70000
+"New York","Wholesale Trade",52000,48200
+"North Carolina","Administration",28600,22600
+"North Carolina","Agriculture",34200,18000
+"North Carolina","Arts",21000,12400
+"North Carolina","Banking/Insurance",95000,56000
+"North Carolina","Construction",36400,31200
+"North Carolina","Education",45000,38000
+"North Carolina","Food/Lodging",11000,10000
+"North Carolina","Government",47000,43000
+"North Carolina","Healthcare",54000,37000
+"North Carolina","Management",90000,55000
+"North Carolina","Manufacturing",48000,33000
+"North Carolina","Media",60000,35000
+"North Carolina","Mining",75000,57000
+"North Carolina","Others",36000,22000
+"North Carolina","Real Estate/Lending",45300,37000
+"North Carolina","Retail",26000,18000
+"North Carolina","Science/Tech",88000,50000
+"North Carolina","Transportation",40000,26000
+"North Carolina","Utilities",75000,70000
+"North Carolina","Wholesale Trade",46600,40000
+"North Dakota","Administration",20500,24000
+"North Dakota","Agriculture",40000,18000
+"North Dakota","Arts",20500,22700
+"North Dakota","Banking/Insurance",60000,46000
+"North Dakota","Construction",47000,45000
+"North Dakota","Education",35000,42000
+"North Dakota","Food/Lodging",20000,12000
+"North Dakota","Government",67000,45000
+"North Dakota","Healthcare",41000,35000
+"North Dakota","Management",138000,1e+05
+"North Dakota","Manufacturing",50000,36000
+"North Dakota","Media",52000,47000
+"North Dakota","Mining",80000,70000
+"North Dakota","Others",33000,20000
+"North Dakota","Real Estate/Lending",50000,18000
+"North Dakota","Retail",30000,15000
+"North Dakota","Science/Tech",55000,40000
+"North Dakota","Transportation",50000,36000
+"North Dakota","Utilities",84000,35000
+"North Dakota","Wholesale Trade",60000,36400
+"Ohio","Administration",29200,25000
+"Ohio","Agriculture",33300,15000
+"Ohio","Arts",17000,8000
+"Ohio","Banking/Insurance",80000,50000
+"Ohio","Construction",45000,40000
+"Ohio","Education",44000,38000
+"Ohio","Food/Lodging",12500,10000
+"Ohio","Government",65000,50000
+"Ohio","Healthcare",47500,35000
+"Ohio","Management",90000,55000
+"Ohio","Manufacturing",50000,38000
+"Ohio","Media",59000,37100
+"Ohio","Mining",69000,60000
+"Ohio","Others",34000,19400
+"Ohio","Real Estate/Lending",42000,40000
+"Ohio","Retail",28000,20000
+"Ohio","Science/Tech",71000,44900
+"Ohio","Transportation",41000,27000
+"Ohio","Utilities",68000,63000
+"Ohio","Wholesale Trade",50000,37000
+"Oklahoma","Administration",25000,20000
+"Oklahoma","Agriculture",25000,14200
+"Oklahoma","Arts",23000,22000
+"Oklahoma","Banking/Insurance",52000,40000
+"Oklahoma","Construction",40000,34000
+"Oklahoma","Education",40000,35000
+"Oklahoma","Food/Lodging",13000,10000
+"Oklahoma","Government",54000,44000
+"Oklahoma","Healthcare",50000,32000
+"Oklahoma","Management",1e+05,85000
+"Oklahoma","Manufacturing",45000,32500
+"Oklahoma","Media",60000,40000
+"Oklahoma","Mining",60000,52000
+"Oklahoma","Others",35000,20000
+"Oklahoma","Real Estate/Lending",40000,40000
+"Oklahoma","Retail",25000,20000
+"Oklahoma","Science/Tech",60000,40000
+"Oklahoma","Transportation",42000,30000
+"Oklahoma","Utilities",70000,67000
+"Oklahoma","Wholesale Trade",50000,42000
+"Oregon","Administration",32000,25000
+"Oregon","Agriculture",31200,20000
+"Oregon","Arts",25000,13000
+"Oregon","Banking/Insurance",75000,50000
+"Oregon","Construction",45000,45000
+"Oregon","Education",49000,36000
+"Oregon","Food/Lodging",15000,15000
+"Oregon","Government",67000,53000
+"Oregon","Healthcare",50000,40000
+"Oregon","Management",52000,124000
+"Oregon","Manufacturing",55000,41000
+"Oregon","Media",45000,44400
+"Oregon","Mining",62000,30000
+"Oregon","Others",40000,23000
+"Oregon","Real Estate/Lending",50000,40000
+"Oregon","Retail",29000,20300
+"Oregon","Science/Tech",80000,55000
+"Oregon","Transportation",40000,28000
+"Oregon","Utilities",90000,80000
+"Oregon","Wholesale Trade",53000,50000
+"Pennsylvania","Administration",31000,25000
+"Pennsylvania","Agriculture",32000,20500
+"Pennsylvania","Arts",14000,12500
+"Pennsylvania","Banking/Insurance",80000,51000
+"Pennsylvania","Construction",48000,40000
+"Pennsylvania","Education",53000,45000
+"Pennsylvania","Food/Lodging",11500,9000
+"Pennsylvania","Government",66000,48000
+"Pennsylvania","Healthcare",48000,37100
+"Pennsylvania","Management",120000,57000
+"Pennsylvania","Manufacturing",54000,42200
+"Pennsylvania","Media",74000,42000
+"Pennsylvania","Mining",64000,40000
+"Pennsylvania","Others",36000,20000
+"Pennsylvania","Real Estate/Lending",50000,37900
+"Pennsylvania","Retail",26900,19700
+"Pennsylvania","Science/Tech",84000,50000
+"Pennsylvania","Transportation",40000,28000
+"Pennsylvania","Utilities",80000,60000
+"Pennsylvania","Wholesale Trade",50000,42900
+"Rhode Island","Administration",31200,18000
+"Rhode Island","Agriculture",25000,25000
+"Rhode Island","Arts",20000,24000
+"Rhode Island","Banking/Insurance",80000,58000
+"Rhode Island","Construction",40000,47000
+"Rhode Island","Education",46000,50000
+"Rhode Island","Food/Lodging",18000,8000
+"Rhode Island","Government",79000,60000
+"Rhode Island","Healthcare",58000,40000
+"Rhode Island","Management",130000,91000
+"Rhode Island","Manufacturing",50000,35000
+"Rhode Island","Media",60000,50000
+"Rhode Island","Mining",35000,NA
+"Rhode Island","Others",40000,32000
+"Rhode Island","Real Estate/Lending",44000,47300
+"Rhode Island","Retail",31000,16000
+"Rhode Island","Science/Tech",86000,45000
+"Rhode Island","Transportation",40000,25000
+"Rhode Island","Utilities",72000,70000
+"Rhode Island","Wholesale Trade",58000,45800
+"South Carolina","Administration",27500,23000
+"South Carolina","Agriculture",32000,14800
+"South Carolina","Arts",15000,13000
+"South Carolina","Banking/Insurance",72000,42000
+"South Carolina","Construction",38600,40000
+"South Carolina","Education",40000,37000
+"South Carolina","Food/Lodging",11000,10000
+"South Carolina","Government",50000,37000
+"South Carolina","Healthcare",58000,34000
+"South Carolina","Management",110000,30000
+"South Carolina","Manufacturing",50000,35000
+"South Carolina","Media",55000,30000
+"South Carolina","Mining",46000,29500
+"South Carolina","Others",40000,20300
+"South Carolina","Real Estate/Lending",40000,30000
+"South Carolina","Retail",28000,18000
+"South Carolina","Science/Tech",70000,42000
+"South Carolina","Transportation",42000,29000
+"South Carolina","Utilities",70000,54000
+"South Carolina","Wholesale Trade",49500,40000
+"South Dakota","Administration",15000,21600
+"South Dakota","Agriculture",40000,36000
+"South Dakota","Arts",20000,4000
+"South Dakota","Banking/Insurance",65000,42000
+"South Dakota","Construction",45000,25700
+"South Dakota","Education",42000,42000
+"South Dakota","Food/Lodging",12000,10800
+"South Dakota","Government",52000,37000
+"South Dakota","Healthcare",50000,36000
+"South Dakota","Manufacturing",48000,36000
+"South Dakota","Media",62000,36000
+"South Dakota","Mining",47000,20000
+"South Dakota","Others",37400,18000
+"South Dakota","Real Estate/Lending",40000,33000
+"South Dakota","Retail",22400,14000
+"South Dakota","Science/Tech",63000,50000
+"South Dakota","Transportation",58000,40000
+"South Dakota","Utilities",70000,60000
+"South Dakota","Wholesale Trade",59000,42100
+"South Dakota","Management",NA,50000
+"Tennessee","Administration",30000,26000
+"Tennessee","Agriculture",25000,23900
+"Tennessee","Arts",21200,12000
+"Tennessee","Banking/Insurance",68000,45000
+"Tennessee","Construction",38000,34000
+"Tennessee","Education",45000,39000
+"Tennessee","Food/Lodging",16400,11100
+"Tennessee","Government",50000,41000
+"Tennessee","Healthcare",54000,35000
+"Tennessee","Management",80000,53000
+"Tennessee","Manufacturing",45000,34000
+"Tennessee","Media",45000,40000
+"Tennessee","Mining",68000,50000
+"Tennessee","Others",38000,19000
+"Tennessee","Real Estate/Lending",55000,43800
+"Tennessee","Retail",30000,19100
+"Tennessee","Science/Tech",75000,45000
+"Tennessee","Transportation",40000,30000
+"Tennessee","Utilities",60000,52000
+"Tennessee","Wholesale Trade",50000,36100
+"Texas","Administration",30000,22800
+"Texas","Agriculture",29000,20000
+"Texas","Arts",20000,13000
+"Texas","Banking/Insurance",80000,50000
+"Texas","Construction",40000,38000
+"Texas","Education",50000,43300
+"Texas","Food/Lodging",15000,12000
+"Texas","Government",56000,43200
+"Texas","Healthcare",51000,33000
+"Texas","Management",1e+05,56000
+"Texas","Manufacturing",55000,39600
+"Texas","Media",63000,44000
+"Texas","Mining",80000,60000
+"Texas","Others",35000,21000
+"Texas","Real Estate/Lending",46000,40000
+"Texas","Retail",29000,20700
+"Texas","Science/Tech",85000,54000
+"Texas","Transportation",42000,30000
+"Texas","Utilities",63000,60000
+"Texas","Wholesale Trade",52000,40000
+"Utah","Administration",35000,24400
+"Utah","Agriculture",40000,6000
+"Utah","Arts",15600,8000
+"Utah","Banking/Insurance",60000,41000
+"Utah","Construction",45000,31000
+"Utah","Education",36000,25000
+"Utah","Food/Lodging",15600,10000
+"Utah","Government",62000,42000
+"Utah","Healthcare",58000,30000
+"Utah","Management",1e+05,21900
+"Utah","Manufacturing",47000,32000
+"Utah","Media",66000,22000
+"Utah","Mining",79000,50000
+"Utah","Others",41000,20000
+"Utah","Real Estate/Lending",50000,35000
+"Utah","Retail",32000,18000
+"Utah","Science/Tech",75000,45000
+"Utah","Transportation",43000,26300
+"Utah","Utilities",67000,57000
+"Utah","Wholesale Trade",56000,30000
+"Vermont","Administration",28400,14000
+"Vermont","Agriculture",31200,24000
+"Vermont","Arts",5000,20900
+"Vermont","Banking/Insurance",75000,48000
+"Vermont","Construction",40000,45000
+"Vermont","Education",40000,40000
+"Vermont","Food/Lodging",10000,8000
+"Vermont","Government",65000,60000
+"Vermont","Healthcare",45000,42500
+"Vermont","Management",84000,NA
+"Vermont","Manufacturing",44000,38000
+"Vermont","Media",56000,50000
+"Vermont","Mining",52000,NA
+"Vermont","Others",40000,24000
+"Vermont","Real Estate/Lending",36000,50000
+"Vermont","Retail",26000,23300
+"Vermont","Science/Tech",93000,51000
+"Vermont","Transportation",40000,22500
+"Vermont","Utilities",60000,78000
+"Vermont","Wholesale Trade",51000,45000
+"Virginia","Administration",35000,23000
+"Virginia","Agriculture",27800,15000
+"Virginia","Arts",20600,12000
+"Virginia","Banking/Insurance",91000,53000
+"Virginia","Construction",42000,40000
+"Virginia","Education",49000,43000
+"Virginia","Food/Lodging",15000,11000
+"Virginia","Government",75000,62000
+"Virginia","Healthcare",54000,39000
+"Virginia","Management",130000,32200
+"Virginia","Manufacturing",55000,38500
+"Virginia","Media",75000,47900
+"Virginia","Mining",60000,42300
+"Virginia","Others",40000,25300
+"Virginia","Real Estate/Lending",58000,44700
+"Virginia","Retail",26600,18000
+"Virginia","Science/Tech",1e+05,70000
+"Virginia","Transportation",40000,27000
+"Virginia","Utilities",83000,70000
+"Virginia","Wholesale Trade",48000,40000
+"Washington","Administration",38000,34000
+"Washington","Agriculture",33000,20000
+"Washington","Arts",28300,22000
+"Washington","Banking/Insurance",90000,58000
+"Washington","Construction",52000,45000
+"Washington","Education",52000,42000
+"Washington","Food/Lodging",15200,16000
+"Washington","Government",65000,58000
+"Washington","Healthcare",57000,40000
+"Washington","Management",75000,65000
+"Washington","Manufacturing",65000,47100
+"Washington","Media",110000,70000
+"Washington","Mining",99000,48600
+"Washington","Others",41800,25000
+"Washington","Real Estate/Lending",56000,50000
+"Washington","Retail",36000,28000
+"Washington","Science/Tech",115000,67000
+"Washington","Transportation",46700,35000
+"Washington","Utilities",1e+05,70000
+"Washington","Wholesale Trade",50000,45000
+"West Virginia","Administration",30000,18800
+"West Virginia","Agriculture",30000,13200
+"West Virginia","Arts",9900,8000
+"West Virginia","Banking/Insurance",60000,36000
+"West Virginia","Construction",38100,28000
+"West Virginia","Education",43700,38000
+"West Virginia","Food/Lodging",14500,10300
+"West Virginia","Government",58000,41000
+"West Virginia","Healthcare",45000,30000
+"West Virginia","Manufacturing",51000,33150
+"West Virginia","Media",40000,22000
+"West Virginia","Mining",70000,35000
+"West Virginia","Others",31100,17000
+"West Virginia","Real Estate/Lending",45000,41300
+"West Virginia","Retail",24000,16000
+"West Virginia","Science/Tech",62000,40000
+"West Virginia","Transportation",40000,21600
+"West Virginia","Utilities",65000,93000
+"West Virginia","Wholesale Trade",47000,40000
+"West Virginia","Management",NA,45000
+"Wisconsin","Administration",35000,30000
+"Wisconsin","Agriculture",37400,16000
+"Wisconsin","Arts",15000,6000
+"Wisconsin","Banking/Insurance",77000,50000
+"Wisconsin","Construction",50000,36000
+"Wisconsin","Education",50000,40000
+"Wisconsin","Food/Lodging",14000,10000
+"Wisconsin","Government",60000,48000
+"Wisconsin","Healthcare",50000,35400
+"Wisconsin","Management",35000,43000
+"Wisconsin","Manufacturing",50000,38000
+"Wisconsin","Media",56000,32000
+"Wisconsin","Mining",66000,70000
+"Wisconsin","Others",36000,22000
+"Wisconsin","Real Estate/Lending",50000,40000
+"Wisconsin","Retail",30000,20000
+"Wisconsin","Science/Tech",76000,48000
+"Wisconsin","Transportation",42000,35000
+"Wisconsin","Utilities",80000,62000
+"Wisconsin","Wholesale Trade",50000,43000
+"Wyoming","Administration",32000,16800
+"Wyoming","Agriculture",24000,28400
+"Wyoming","Arts",24000,10300
+"Wyoming","Banking/Insurance",90000,35000
+"Wyoming","Construction",45000,30000
+"Wyoming","Education",50000,30000
+"Wyoming","Food/Lodging",9000,12000
+"Wyoming","Government",50000,38000
+"Wyoming","Healthcare",46000,33000
+"Wyoming","Management",35000,NA
+"Wyoming","Manufacturing",60000,9000
+"Wyoming","Media",60000,18000
+"Wyoming","Mining",70000,48000
+"Wyoming","Others",48000,14000
+"Wyoming","Real Estate/Lending",80000,35000
+"Wyoming","Retail",22000,19500
+"Wyoming","Science/Tech",69000,40000
+"Wyoming","Transportation",59000,35000
+"Wyoming","Utilities",72000,153000
+"Wyoming","Wholesale Trade",69000,34000
+"United States","Administration",30700,25000
+"United States","Agriculture",30000,19400
+"United States","Arts",21600,15000
+"United States","Banking/Insurance",85000,51000
+"United States","Construction",44000,39500
+"United States","Education",49000,40000
+"United States","Food/Lodging",15000,12000
+"United States","Government",60000,50000
+"United States","Healthcare",51000,36000
+"United States","Management",87000,59000
+"United States","Manufacturing",52000,40000
+"United States","Media",70000,47800
+"United States","Mining",70000,55000
+"United States","Others",36000,23000
+"United States","Real Estate/Lending",48000,40000
+"United States","Retail",29700,20000
+"United States","Science/Tech",85000,55000
+"United States","Transportation",40000,30000
+"United States","Utilities",80000,62000
+"United States","Wholesale Trade",50000,40000

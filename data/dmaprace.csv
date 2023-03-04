@@ -1,0 +1,313 @@
+"STATE","RACE","MED_INC_M","MED_INC_F"
+"Alabama","White",48000,30000
+"Alabama","Black/African American",30000,24000
+"Alabama","American Indian/Alaska Native",30000,40000
+"Alabama","Asian",51000,27000
+"Alabama","Mixed/Other",39000,22000
+"Alabama","Hispanic",30000,22000
+"Alaska","White",60000,40000
+"Alaska","Black/African American",45000,54000
+"Alaska","American Indian/Alaska Native",28000,30000
+"Alaska","Asian",31000,29000
+"Alaska","Mixed/Other",45000,40000
+"Alaska","Hispanic",37000,35000
+"Arizona","White",50000,39000
+"Arizona","Black/African American",38000,31200
+"Arizona","American Indian/Alaska Native",31000,30000
+"Arizona","Asian",62000,36000
+"Arizona","Mixed/Other",40000,30000
+"Arizona","Hispanic",35000,28600
+"Arkansas","White",40000,30000
+"Arkansas","Black/African American",30000,26900
+"Arkansas","American Indian/Alaska Native",31000,44000
+"Arkansas","Asian",50000,26000
+"Arkansas","Mixed/Other",32000,31000
+"Arkansas","Hispanic",34000,24000
+"California","White",70000,48000
+"California","Black/African American",40000,40000
+"California","American Indian/Alaska Native",30000,33000
+"California","Asian",65000,50000
+"California","Mixed/Other",50000,40000
+"California","Hispanic",35700,28000
+"Colorado","White",56000,41300
+"Colorado","Black/African American",40000,34000
+"Colorado","American Indian/Alaska Native",33000,38900
+"Colorado","Asian",50000,35000
+"Colorado","Mixed/Other",50000,32400
+"Colorado","Hispanic",40000,30000
+"Connecticut","White",63000,45000
+"Connecticut","Black/African American",35000,32400
+"Connecticut","American Indian/Alaska Native",52000,24000
+"Connecticut","Asian",65000,40000
+"Connecticut","Mixed/Other",40000,32400
+"Connecticut","Hispanic",35000,26000
+"Delaware","White",50000,37000
+"Delaware","Black/African American",36000,32000
+"Delaware","American Indian/Alaska Native",19200,38000
+"Delaware","Asian",75000,56000
+"Delaware","Mixed/Other",31000,25000
+"Delaware","Hispanic",32000,25000
+"District of Columbia","White",1e+05,85000
+"District of Columbia","Black/African American",45000,49000
+"District of Columbia","Asian",92000,78000
+"District of Columbia","Mixed/Other",67000,80000
+"District of Columbia","Hispanic",65000,60000
+"District of Columbia","American Indian/Alaska Native",NA,50000
+"Florida","White",48000,35000
+"Florida","Black/African American",30000,29200
+"Florida","American Indian/Alaska Native",34000,22900
+"Florida","Asian",50000,32000
+"Florida","Mixed/Other",40000,30000
+"Florida","Hispanic",35000,27300
+"Georgia","White",50000,35000
+"Georgia","Black/African American",34300,30000
+"Georgia","American Indian/Alaska Native",37000,30000
+"Georgia","Asian",52000,35000
+"Georgia","Mixed/Other",44300,30000
+"Georgia","Hispanic",35000,25000
+"Hawaii","White",55000,32400
+"Hawaii","Black/African American",35000,48000
+"Hawaii","American Indian/Alaska Native",62000,31000
+"Hawaii","Asian",45000,36000
+"Hawaii","Mixed/Other",41000,34000
+"Hawaii","Hispanic",41000,35000
+"Idaho","White",42000,30000
+"Idaho","Black/African American",32000,30000
+"Idaho","American Indian/Alaska Native",48000,40000
+"Idaho","Asian",36000,29000
+"Idaho","Mixed/Other",40000,28000
+"Idaho","Hispanic",31500,23200
+"Illinois","White",55000,39500
+"Illinois","Black/African American",35000,32000
+"Illinois","American Indian/Alaska Native",50000,24000
+"Illinois","Asian",61000,42000
+"Illinois","Mixed/Other",45000,29700
+"Illinois","Hispanic",35000,29000
+"Indiana","White",46800,32000
+"Indiana","Black/African American",33000,29300
+"Indiana","American Indian/Alaska Native",40000,34200
+"Indiana","Asian",40000,35000
+"Indiana","Mixed/Other",40000,28000
+"Indiana","Hispanic",35000,25000
+"Iowa","White",47000,33000
+"Iowa","Black/African American",31200,25000
+"Iowa","American Indian/Alaska Native",46100,18800
+"Iowa","Asian",42000,35000
+"Iowa","Mixed/Other",37000,27000
+"Iowa","Hispanic",34000,21000
+"Kansas","White",45000,32000
+"Kansas","Black/African American",30000,29000
+"Kansas","American Indian/Alaska Native",42000,14000
+"Kansas","Asian",55000,33300
+"Kansas","Mixed/Other",37000,25000
+"Kansas","Hispanic",32700,25000
+"Kentucky","White",42000,30000
+"Kentucky","Black/African American",28600,25000
+"Kentucky","American Indian/Alaska Native",45000,10500
+"Kentucky","Asian",35000,34000
+"Kentucky","Mixed/Other",32000,25000
+"Kentucky","Hispanic",30000,26000
+"Louisiana","White",50000,32000
+"Louisiana","Black/African American",30000,22300
+"Louisiana","American Indian/Alaska Native",40000,20000
+"Louisiana","Asian",40000,28000
+"Louisiana","Mixed/Other",40000,20000
+"Louisiana","Hispanic",33000,22900
+"Maine","White",44000,35000
+"Maine","Black/African American",35000,14000
+"Maine","American Indian/Alaska Native",22500,30000
+"Maine","Asian",53000,35000
+"Maine","Mixed/Other",42000,35000
+"Maine","Hispanic",50000,25000
+"Maryland","White",65000,50000
+"Maryland","Black/African American",45000,41000
+"Maryland","American Indian/Alaska Native",12000,35000
+"Maryland","Asian",73000,50000
+"Maryland","Mixed/Other",50000,45000
+"Maryland","Hispanic",40000,26000
+"Massachusetts","White",65000,48000
+"Massachusetts","Black/African American",42000,37000
+"Massachusetts","American Indian/Alaska Native",40000,12000
+"Massachusetts","Asian",65000,50000
+"Massachusetts","Mixed/Other",42000,35000
+"Massachusetts","Hispanic",35000,27000
+"Michigan","White",47000,31200
+"Michigan","Black/African American",31000,26000
+"Michigan","American Indian/Alaska Native",26300,28000
+"Michigan","Asian",70000,38700
+"Michigan","Mixed/Other",35000,27000
+"Michigan","Hispanic",35000,25000
+"Minnesota","White",55000,40000
+"Minnesota","Black/African American",30000,30000
+"Minnesota","American Indian/Alaska Native",22000,26000
+"Minnesota","Asian",45800,37000
+"Minnesota","Mixed/Other",40000,32000
+"Minnesota","Hispanic",34200,25000
+"Mississippi","White",45000,30000
+"Mississippi","Black/African American",27500,25000
+"Mississippi","American Indian/Alaska Native",30000,22000
+"Mississippi","Asian",45000,26000
+"Mississippi","Mixed/Other",34200,25000
+"Mississippi","Hispanic",26000,28000
+"Missouri","White",45000,32000
+"Missouri","Black/African American",32000,25000
+"Missouri","American Indian/Alaska Native",38000,30000
+"Missouri","Asian",60000,33000
+"Missouri","Mixed/Other",37000,30000
+"Missouri","Hispanic",34000,25000
+"Montana","White",40000,30000
+"Montana","Black/African American",36000,24000
+"Montana","American Indian/Alaska Native",20000,18000
+"Montana","Asian",58000,15000
+"Montana","Mixed/Other",48000,27000
+"Montana","Hispanic",31000,29000
+"Nebraska","White",48000,35000
+"Nebraska","Black/African American",32000,34000
+"Nebraska","American Indian/Alaska Native",50000,25000
+"Nebraska","Asian",38900,30000
+"Nebraska","Mixed/Other",40000,23500
+"Nebraska","Hispanic",36500,24000
+"Nevada","White",50000,40000
+"Nevada","Black/African American",30600,32000
+"Nevada","American Indian/Alaska Native",30000,33200
+"Nevada","Asian",40000,34000
+"Nevada","Mixed/Other",40000,30000
+"Nevada","Hispanic",34000,28800
+"New Hampshire","White",56000,38000
+"New Hampshire","Black/African American",34700,40000
+"New Hampshire","American Indian/Alaska Native",70000,30000
+"New Hampshire","Asian",70000,44000
+"New Hampshire","Mixed/Other",46000,30000
+"New Hampshire","Hispanic",42000,30000
+"New Jersey","White",67000,47800
+"New Jersey","Black/African American",40000,36000
+"New Jersey","American Indian/Alaska Native",60000,40000
+"New Jersey","Asian",90000,59000
+"New Jersey","Mixed/Other",50000,40000
+"New Jersey","Hispanic",35400,28200
+"New Mexico","White",50000,35000
+"New Mexico","Black/African American",32000,14700
+"New Mexico","American Indian/Alaska Native",30800,24000
+"New Mexico","Asian",50000,32000
+"New Mexico","Mixed/Other",44000,25200
+"New Mexico","Hispanic",32000,28100
+"New York","White",60000,43000
+"New York","Black/African American",40000,39000
+"New York","American Indian/Alaska Native",35000,32000
+"New York","Asian",48000,38000
+"New York","Mixed/Other",45000,36000
+"New York","Hispanic",38000,30000
+"North Carolina","White",50000,35000
+"North Carolina","Black/African American",32000,30000
+"North Carolina","American Indian/Alaska Native",38000,30000
+"North Carolina","Asian",70000,42000
+"North Carolina","Mixed/Other",38000,28000
+"North Carolina","Hispanic",30000,22300
+"North Dakota","White",48000,32100
+"North Dakota","Black/African American",37900,27000
+"North Dakota","American Indian/Alaska Native",35000,25000
+"North Dakota","Asian",35000,29500
+"North Dakota","Mixed/Other",68000,30800
+"North Dakota","Hispanic",40000,25000
+"Ohio","White",47000,33000
+"Ohio","Black/African American",30000,28000
+"Ohio","American Indian/Alaska Native",30000,50000
+"Ohio","Asian",55000,34000
+"Ohio","Mixed/Other",34600,26000
+"Ohio","Hispanic",35000,25000
+"Oklahoma","White",45000,30800
+"Oklahoma","Black/African American",28000,23200
+"Oklahoma","American Indian/Alaska Native",33000,28000
+"Oklahoma","Asian",45000,27100
+"Oklahoma","Mixed/Other",32000,28000
+"Oklahoma","Hispanic",33000,24000
+"Oregon","White",50000,36000
+"Oregon","Black/African American",38000,30000
+"Oregon","American Indian/Alaska Native",40000,28000
+"Oregon","Asian",56000,38000
+"Oregon","Mixed/Other",42000,30000
+"Oregon","Hispanic",32000,27000
+"Pennsylvania","White",50000,35000
+"Pennsylvania","Black/African American",30700,32000
+"Pennsylvania","American Indian/Alaska Native",30000,21000
+"Pennsylvania","Asian",62000,35000
+"Pennsylvania","Mixed/Other",40000,30000
+"Pennsylvania","Hispanic",35000,26000
+"Rhode Island","White",54000,40000
+"Rhode Island","Black/African American",34500,30000
+"Rhode Island","American Indian/Alaska Native",2700,30000
+"Rhode Island","Asian",60000,35000
+"Rhode Island","Mixed/Other",30000,24000
+"Rhode Island","Hispanic",32300,22500
+"South Carolina","White",48000,33000
+"South Carolina","Black/African American",32000,27000
+"South Carolina","American Indian/Alaska Native",36000,18000
+"South Carolina","Asian",40000,33000
+"South Carolina","Mixed/Other",39000,24000
+"South Carolina","Hispanic",30800,24000
+"South Dakota","White",45000,33300
+"South Dakota","Black/African American",29000,25000
+"South Dakota","American Indian/Alaska Native",28000,20100
+"South Dakota","Asian",25000,45000
+"South Dakota","Mixed/Other",28000,25000
+"South Dakota","Hispanic",25000,18000
+"Tennessee","White",45000,32000
+"Tennessee","Black/African American",33000,30000
+"Tennessee","American Indian/Alaska Native",25000,30300
+"Tennessee","Asian",52000,38000
+"Tennessee","Mixed/Other",39000,26000
+"Tennessee","Hispanic",30000,25000
+"Texas","White",60000,40000
+"Texas","Black/African American",36200,32000
+"Texas","American Indian/Alaska Native",36000,24000
+"Texas","Asian",65000,40000
+"Texas","Mixed/Other",44000,35000
+"Texas","Hispanic",35000,25000
+"Utah","White",50000,29000
+"Utah","Black/African American",30000,24000
+"Utah","American Indian/Alaska Native",28000,22900
+"Utah","Asian",43000,33000
+"Utah","Mixed/Other",39000,27000
+"Utah","Hispanic",36000,25000
+"Vermont","White",40000,38000
+"Vermont","Black/African American",12000,25000
+"Vermont","American Indian/Alaska Native",8100,21400
+"Vermont","Asian",36000,19700
+"Vermont","Mixed/Other",37400,29000
+"Vermont","Hispanic",65000,35000
+"Virginia","White",57000,40000
+"Virginia","Black/African American",37300,33000
+"Virginia","American Indian/Alaska Native",50000,25000
+"Virginia","Asian",75000,45000
+"Virginia","Mixed/Other",45000,30000
+"Virginia","Hispanic",42000,26000
+"Washington","White",60000,40000
+"Washington","Black/African American",40000,34000
+"Washington","American Indian/Alaska Native",32000,30000
+"Washington","Asian",78000,45800
+"Washington","Mixed/Other",50000,38000
+"Washington","Hispanic",36000,29000
+"West Virginia","White",40000,28000
+"West Virginia","Black/African American",28800,28500
+"West Virginia","American Indian/Alaska Native",152000,12600
+"West Virginia","Asian",49600,36000
+"West Virginia","Mixed/Other",30000,20000
+"West Virginia","Hispanic",28000,23400
+"Wisconsin","White",50000,35000
+"Wisconsin","Black/African American",32000,27000
+"Wisconsin","American Indian/Alaska Native",37000,30000
+"Wisconsin","Asian",43000,35000
+"Wisconsin","Mixed/Other",40000,28000
+"Wisconsin","Hispanic",35000,22000
+"Wyoming","White",48000,30000
+"Wyoming","Black/African American",46000,15000
+"Wyoming","American Indian/Alaska Native",20800,22900
+"Wyoming","Asian",67000,16800
+"Wyoming","Mixed/Other",41500,20800
+"Wyoming","Hispanic",30000,24000
+"United States","White",50000,36000
+"United States","Black/African American",35000,30000
+"United States","American Indian/Alaska Native",32000,28000
+"United States","Asian",60000,41000
+"United States","Mixed/Other",40000,30200
+"United States","Hispanic",35000,26600

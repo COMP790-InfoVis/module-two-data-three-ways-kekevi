@@ -5,6 +5,8 @@ by Kevin Chen
 
 A remix of this article from the Pew Research Center: https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/
 
+See online here! https://comp790-infovis.github.io/module-two-data-three-ways-kekevi/
+
 ## Data
 
 According to the article, the data was obtained from "Pew Research Center analysis of the Current Population Survey outgoing rotation group files (IPUMS)", however, there is no link to the actual dataset they used with the variables they used. 

@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v6.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"><script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- <script src="/states-albers-10m.js"></script> -->
     <script>
       // globals
@@ -61,7 +62,8 @@
         "Wyoming"                :  "56"
       }
 
-      let SELECTED_STATE = null  // null <==> All states
+      // let SELECTED_STATE = null  // null <==> All states
+      let REFRESH = {} // callable functions for refreshing views
     </script>
     <style>
       .d3-container {
@@ -69,103 +71,282 @@
       }
       #map-info {
         background-color: white;
-        height: 100px;
+        height: 50px;
         width: 200px;
         position: absolute;
         visibility: hidden;
       }
     </style>
   </head>
-  <body>
+  <body class="container">
     <div>
       Based off of the page
       <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">
         https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/
       </a>
     </div>
+
     <h1>Gender Pay Gap in the United States</h1>
-    <h2>Gap Map</h2>
-    <div id="map" class="d3-container">
-      <div id="map-info"></div>
-    </div>
-    <script> if (true) { // simulate block scoping
-        const margin = {top: 10, right: 30, bottom: 30, left: 60};
-        const width = 660 - margin.left - margin.right;
-        const height = 500 - margin.top - margin.bottom;
-        
-        const svg = d3.select('#map')
-                      .append('svg')
-                      .attr('width', width + margin.left + margin.right)
-                      .attr('height', height + margin.top + margin.bottom)
-                      .append('g')
-                      // .attr('transform', `translate(${margin.left}, ${margin.top})`)
-
-        Promise.all([
-          d3.json("maps/us.json"), // downloaded from https://observablehq.com/@sandraviz/d3-simple-map
-          d3.csv("data/dmap.csv"), 
-        ]).then(function (res) {
-          peek(res)
-          const json = res[0]
-          const data = res[1]
-
-          const projection = d3.geoAlbersUsa()
-            .fitSize([width, height], json)
-            // .scale(500)
-            // .center([0, 0])
-            // .translate([width / 2, height / 2])
-          const geoPath = d3.geoPath(projection)
-
-          data.forEach((d) => {
-            const id = d.STATE
-            const val = +d.MED_INC_F / +d.MED_INC_M
-            json.features.forEach((state) => { // O(n^2) warning
-              if (id == state.properties.name) {
-                state.properties.ratio = val
-              }
+    <div class="row">
+      <div class="col">
+        <h2>Gap Map</h2>
+        <div id="map" class="d3-container">
+          <div id="map-info"></div>
+        </div>
+        <script> if (true) { // simulate block scoping
+            const margin = {top: 0, right: 0, bottom: 0, left: 0};
+            const width = 660 - margin.left - margin.right;
+            const height = 500 - margin.top - margin.bottom;
+            
+            const svg = d3.select('#map')
+                          .append('svg')
+                          .attr('width', width + margin.left + margin.right)
+                          .attr('height', height + margin.top + margin.bottom)
+                          .append('g')
+                          // .attr('transform', `translate(${margin.left}, ${margin.top})`)
+    
+            Promise.all([
+              d3.json("maps/us.json"), // downloaded from https://observablehq.com/@sandraviz/d3-simple-map
+              d3.csv("data/dmap.csv"), 
+            ]).then(function (res) {
+              const json = res[0]
+              const data = res[1]
+    
+              const projection = d3.geoAlbersUsa()
+                .fitSize([width, height], json)
+                // .scale(500)
+                // .center([0, 0])
+                // .translate([width / 2, height / 2])
+              const geoPath = d3.geoPath(projection)
+    
+              data.forEach((d) => {
+                const id = d.STATE
+                const val = +d.MED_INC_F / +d.MED_INC_M
+                json.features.forEach((state) => { // O(n^2) warning
+                  if (id == state.properties.name) {
+                    state.properties.ratio = val
+                  }
+                })
+              })
+    
+              const ratioValues = json.features.map((state) => state.properties.ratio)
+              const rVStats = {min: d3.min(ratioValues), max: d3.max(ratioValues)}
+              rVStats.mid = (rVStats.max + rVStats.min) / 2
+              const colorScale = d3.scaleLinear()
+                                  .domain([rVStats.min, rVStats.mid, rVStats.max])
+                                  // .range(d3.schemeBlues[3])
+                                  .range(d3.schemeRdYlBu[3])
+              
+              svg.selectAll('path')
+                  .data(json.features)
+                  .join('path')
+                    // draw each state
+                    // .attr('d', d3.geoPath().projection(projection))
+                    .attr('d', geoPath)
+                    .attr('class', 'us-state')
+                    .attr('data-state', (d) => d.properties.name)
+                    .attr('fill', (d) => {
+                      return colorScale(d.properties.ratio)
+                    })
+                    .style('stroke', 'black')
+                    .on('mouseover', (e, d) => {
+                      const mapInfo = document.getElementById('map-info')
+                      mapInfo.innerText = `${d.properties.name} - ${d.properties.ratio}`
+                      mapInfo.style.visibility = 'visible'
+                    })
+                    .on('mouseout', (e, d) => {
+                      document.getElementById('map-info').style.visibility = 'hidden'
+                    })
+                    .on('click', (e, d) => {
+                      const selected_state = d.properties.name
+                      Array.from(document.getElementsByClassName('us-state')).forEach(element => {
+                        if (element.dataset.state != selected_state) {
+                          element.style['stroke-width'] = ''
+                        } else {
+                          element.style['stroke-width'] = 3
+                        }
+                      })
+                      REFRESH.refreshProportions(selected_state)
+                    })
             })
+    
+          };
+        </script>
+        <p>The ratio of median income of women to men of each state.</p>
+      </div>
+      <div class="col overflow-auto" style="height: 600px">
+        <h2>Gap Diagrams</h2>
+        <p>Changes with the state chosen. Currently chosen: <span id="selected-state" class="fw-bold">S</span></p>
+        <div id="proportions" class="d3-container"></div>
+        <script>if (true) {
+          const margin = {top: 10, right: 30, bottom: 30, left: 60};
+          const width = 460 - margin.left - margin.right;
+          const height = 400 - margin.top - margin.bottom;
+  
+          function addDisparityLine(append_id, label, percentage, colors = {women: 'pink', men: 'lightblue'}) {
+            const dl = {
+              width: 360,
+              height: 10,
+              margin: {
+                left: 10,
+                right: 10,
+                top: 5,
+                bottom: 20
+              }
+            }
+            dl.mid = dl.height / 2
+            const row = d3.select(append_id)
+                          .append('div')
+                          .attr('class', 'row align-items-center')
+            row.append('p')
+                .attr('class', 'col-3 text-end')
+                .text(label)
+            const svg = row
+                          .append('div')
+                          .attr('class', 'd3-container col-9')
+                          .append('svg')
+                          .attr('width', dl.width + dl.margin.left + dl.margin.right)
+                          .attr('height', dl.height + dl.margin.top + dl.margin.bottom)
+                          .append('g')
+                          .attr('transform', `translate(${dl.margin.left}, ${dl.margin.top})`)
+  
+            const x = d3.scaleLinear()
+                        .domain([0, d3.max([1.0, percentage])])
+                        .range([0, dl.width])
+            // svg.append('text')
+            //     .text('label')
+            //     .attr('transform', `translate(-20, ${dl.mid})`)
+            svg.append('g') // axis
+                .call(d3.axisBottom(x))
+                .attr('transform', `translate(0, ${dl.mid})`)
+            svg.append('g')
+                .selectAll('dot')
+                .data([percentage])
+                .join('circle')
+                  .attr('cx', x)
+                  .attr('cy', dl.mid)
+                  .attr('r', 5)
+                  .style('fill', colors.women)
+                  .style('stroke', 'black')
+            svg.append('g')
+                .selectAll('dot')
+                .data([1])
+                .join('circle')
+                  .attr('cx', x)
+                  .attr('cy', dl.mid)
+                  .attr('r', 5)
+                  .style('fill', colors.men)
+                  .style('stroke', 'black')
+          }
+  
+          Promise.all([
+            d3.csv('data/dmaprace.csv'),
+            d3.csv('data/dmapindustry.csv'),
+            d3.csv('data/dmapages.csv')
+          ]).then((csvs) => {
+            peek(csvs)
+            REFRESH.refreshProportions = (selected_state) => {
+              let [data_race, data_industry, data_ages] = csvs
+              const rootId = '#proportions'
+              const root = d3.select(rootId)
+              root.html(null)
+  
+              // filter by selected states
+              selected_state = selected_state || 'United States' // set default negative value to United States
+              peek(data_race)
+              data_race = data_race.filter(d => selected_state == d.STATE)
+              data_industry = data_industry.filter(d => selected_state == d.STATE)
+              data_ages = data_ages.filter(d => selected_state == d.STATE)
+  
+              root.append('h3').text('by Race')
+              data_race.forEach(d => addDisparityLine(rootId, d.RACE, d.MED_INC_F / d.MED_INC_M))
+              root.append('hr')
+              root.append('h3').text('by Industry')
+              data_industry.forEach(d => addDisparityLine(rootId, d.INDUSTRY, d.MED_INC_F / d.MED_INC_M))
+              root.append('hr')
+              root.append('h3').text('by Age Group')
+              data_ages.forEach(d => addDisparityLine(rootId, d.AGE_GROUP, d.MED_INC_F / d.MED_INC_M))
+              
+              document.getElementById('selected-state').innerText = selected_state
+            }
+  
+            REFRESH.refreshProportions(null)
           })
+  
+          // addDisparityLine('#proportions', 'Testing group', .87)
+          // addDisparityLine('#proportions', 'Testing group', .87)
+          // const svg = d3.select('#proportions') // make a new chart
+          //               .append('svg')    // attach a new svg element
+          //               .attr('width', width + margin.left + margin.right)
+          //               .attr('height', height + margin.top + margin.bottom)
+          //               .append('g')
+          //               .attr('transform', `translate(${margin.left}, ${margin.top})`)
+  
+        }
+        </script>
+  
+      </div>
+    </div>
 
-          const ratioValues = json.features.map((state) => state.properties.ratio)
-          const rVStats = {min: d3.min(ratioValues), max: d3.max(ratioValues)}
-          rVStats.mid = (rVStats.max + rVStats.min) / 2
-          const colorScale = d3.scaleLinear()
-                              .domain([rVStats.min, rVStats.mid, rVStats.max])
-                              // .range(d3.schemeBlues[3])
-                              .range(d3.schemeRdYlBu[3])
-                              peek(colorScale)
-          
-          svg.selectAll('path')
-              .data(json.features)
-              .join('path')
-                // draw each state
-                // .attr('d', d3.geoPath().projection(projection))
-                .attr('d', geoPath)
-                .attr('fill', (d) => {
-                  return colorScale(d.properties.ratio)
-                })
-                .style('stroke', 'black')
-                .on('mouseover', (e, d) => {
-                  const mapInfo = document.getElementById('map-info')
-                  mapInfo.innerText = `${d.properties.name} - ${d.properties.ratio}`
-                  mapInfo.style.visibility = 'visible'
-                })
-                .on('mouseout', (e, d) => {
-                  document.getElementById('map-info').style.visibility = 'hidden'
-                })
-                .on('click', (e, d) => {
-                  SELECTED_STATE = d.properties.name
-                  console.log(SELECTED_STATE)
-                })
+    <hr>
+    
+    <h2>Median Income Relative to White Men by Sex and Race</h2>
+    <div id="bar" class="d3-container"></div>
+    <script>if (true) {
+      const margin = {top: 10, right: 30, bottom: 100, left: 60};
+      const width = 560 - margin.left - margin.right;
+      const height = 500 - margin.top - margin.bottom;
+
+      const sex2label = {1: 'Men', 2: 'Women'}
+      const race_sex_label = (d) => `${d.RACE} ${d.SEX == 1 ? 'Men' : 'Women'}`
+
+      const svg = d3.select('#bar') // make a new chart
+                    .append('svg')    // attach a new svg element
+                    .attr('width', width + margin.left + margin.right)
+                    .attr('height', height + margin.top + margin.bottom)
+                    .append('g')
+                    .attr('transform', `translate(${margin.left}, ${margin.top})`)
+
+      d3.csv('data/dwhitemen.csv').then((data) => {
+        const white_men_MED_INC = data.find(d => d.SEX == '1' && d.RACE == 'White').MED_INC
+        data.forEach(d => { // normalize relative to white men
+          d.MED_INC = d.MED_INC / white_men_MED_INC
         })
 
-      };
-    </script>
-    <p>The ratio of median income of women to men of each state.</p>
+        const x = d3.scaleBand()
+                    .domain(data.map(race_sex_label))
+                    .range([0, width])
+                    .padding(0.2)
+        const y = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d.MED_INC)])
+                    .range([height, 0])
+        const color = d3.scaleOrdinal()
+                        .domain([1, 2])
+                        .range(['lightblue', 'pink'])
 
-    <h2>Gap Diagrams</h2>
-    <div id="proportions" class="d3-container">
-      
-    </div>
+        svg.append('g')
+            .attr('transform', `translate(0, ${height})`)
+            .call(d3.axisBottom(x))
+            .selectAll('text') // rotate label src: http://www.d3noob.org/2013/01/how-to-rotate-text-labels-for-x-axis-of.html
+            .style('text-anchor', 'end')
+            .attr('dx', '-.8em')
+            .attr('dy', '.15em')
+            .attr('transform', 'rotate(-40)')
+        svg.append('g')
+            .call(d3.axisLeft(y))
+
+        svg.append('g')
+            .selectAll('bar')
+            .data(data)
+            .join('rect')
+              .attr('x', d => x(race_sex_label(d)))
+              .attr('y', d => y(d.MED_INC))
+              .attr('width', d => x.bandwidth())
+              .attr('height', d => height - y(d.MED_INC))
+              .style('fill', d => color(d.SEX))
+      })
+    }
+    </script>
   </body>
 </html>
 
