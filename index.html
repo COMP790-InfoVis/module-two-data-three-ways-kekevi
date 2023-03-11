@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"><script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script> <!-- For easier legend support http://using-d3js.com/04_08_legends.html and https://d3-legend.susielu.com/-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- <script src="/states-albers-10m.js"></script> -->
     <script>
@@ -72,24 +74,39 @@
       #map-info {
         background-color: white;
         height: 50px;
-        width: 200px;
+        width: 400px;
         position: absolute;
         visibility: hidden;
       }
     </style>
   </head>
   <body class="container">
-    <div>
-      Based off of the page
-      <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">
-        https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/
-      </a>
-    </div>
-
     <h1>Gender Pay Gap in the United States</h1>
+    <p>For UNC COMP 590 Module 2 - Kevin Chen</p>
+    <p>
+      This page shows the gender pay gap by different demographics using the US Census 2021 ACS (1-year) dataset, downloaded from IPUMS.
+      To see more information on how the data was processed, go to the Github page <a href="https://github.com/COMP790-InfoVis/module-two-data-three-ways-kekevi">here</a>.
+    </p>
+    <p>
+      This page is based off the Pew Research Center article <a href="https://www.pewresearch.org/social-trends/2023/03/01/the-enduring-grip-of-the-gender-pay-gap/">"The Enduring Grip of the Gender Pay Gap"</a>
+      by Rakesh Kochhar, published on March 1, 2023. The article explains how though the gender pay gap has shrunk from the 1980s, progress has stalled since the beginning of the 21st century.
+    </p>
+    <p>
+      The article attempts to explore why the gap still remains and how age, motherhood, education/industry, and race/ethnicity affects women's pay. Overall, their analysis concluded that 
+      the pay gap is smallest at the start of their careers but gets wider with age, especially at motherhood age, though they found that it's not so much that pregnancy and having an infant reduces
+      the earning (long-term), but rather a "fatherhood wage premium" exists where fathers work more than men without children. Alongside this, the different industries suffer from extensive gender
+      segregation, and education does not seem to affect it. As with most socioeconomic phenomena, race/ethnicity plays a signifcant factor where black and hispanic
+      women experience the largest wage gap.
+    </p>
+    <p>
+      Though they do not give the exact dataset they used, citing "Source: Pew Research Center analysis of the Current Population Survey outgoing rotation group files (IPUMS)", I attempted to
+      go to IPUMS to download the data myself, though my selection is not the same as what they used. Still, this page attempts to explore the same questions while adding a way to further explore with the
+      data by geographic borders in the United States. 
+    </p>
     <div class="row">
       <div class="col">
         <h2>Gap Map</h2>
+        <p>The ratio of median income of women to men of each state.</p>
         <div id="map" class="d3-container">
           <div id="map-info"></div>
         </div>
@@ -151,7 +168,7 @@
                     .style('stroke', 'black')
                     .on('mouseover', (e, d) => {
                       const mapInfo = document.getElementById('map-info')
-                      mapInfo.innerText = `${d.properties.name} - ${d.properties.ratio}`
+                      mapInfo.innerText = `${d.properties.name} - ${(d.properties.ratio * 100).toFixed(2)}% of the median income of men`
                       mapInfo.style.visibility = 'visible'
                     })
                     .on('mouseout', (e, d) => {
@@ -159,24 +176,30 @@
                     })
                     .on('click', (e, d) => {
                       const selected_state = d.properties.name
-                      Array.from(document.getElementsByClassName('us-state')).forEach(element => {
-                        if (element.dataset.state != selected_state) {
-                          element.style['stroke-width'] = ''
-                        } else {
-                          element.style['stroke-width'] = 3
-                        }
-                      })
                       REFRESH.refreshProportions(selected_state)
                     })
+
+              const legend = d3.legendColor()
+                                .scale(colorScale)
+                                .orient('horizontal')
+                                .shapeWidth(40)
+                                .labelFormat(d3.format(".2f"))
+              svg.append('g')
+                  .attr('transform', `translate(${width-50*5}, 0)`)
+                  // .attr('width', 300)
+                  // .attr('height', 200)
+                  .call(legend)
+
             })
     
           };
         </script>
-        <p>The ratio of median income of women to men of each state.</p>
+        <button onclick="REFRESH.refreshProportions()" class="btn btn-secondary">Reset to Entire United States</button>
       </div>
       <div class="col overflow-auto" style="height: 600px">
         <h2>Gap Diagrams</h2>
-        <p>Changes with the state chosen. Currently chosen: <span id="selected-state" class="fw-bold">S</span></p>
+        <p>Changes with the state chosen. Currently chosen: <span id="selected-state" class="fw-bold"></span></p>
+        <p>Pink dots represent the ratio of the median salary of women to the median salary of men. Blue dots are always at 1.</p>
         <div id="proportions" class="d3-container"></div>
         <script>if (true) {
           const margin = {top: 10, right: 30, bottom: 30, left: 60};
@@ -244,16 +267,23 @@
             d3.csv('data/dmapindustry.csv'),
             d3.csv('data/dmapages.csv')
           ]).then((csvs) => {
-            peek(csvs)
             REFRESH.refreshProportions = (selected_state) => {
               let [data_race, data_industry, data_ages] = csvs
               const rootId = '#proportions'
               const root = d3.select(rootId)
               root.html(null)
+
+              // update map highlight
+              Array.from(document.getElementsByClassName('us-state')).forEach(element => {
+                if (element.dataset.state != selected_state) {
+                  element.style['stroke-width'] = ''
+                } else {
+                  element.style['stroke-width'] = 3
+                }
+              })
   
               // filter by selected states
               selected_state = selected_state || 'United States' // set default negative value to United States
-              peek(data_race)
               data_race = data_race.filter(d => selected_state == d.STATE)
               data_industry = data_industry.filter(d => selected_state == d.STATE)
               data_ages = data_ages.filter(d => selected_state == d.STATE)
@@ -291,9 +321,10 @@
     <hr>
     
     <h2>Median Income Relative to White Men by Sex and Race</h2>
+    <p>A barchart of the median salary of racial-sex groups relative to white men. Blue bars represent men and pink bars represent women.</p>
     <div id="bar" class="d3-container"></div>
     <script>if (true) {
-      const margin = {top: 10, right: 30, bottom: 100, left: 60};
+      const margin = {top: 10, right: 30, bottom: 120, left: 60};
       const width = 560 - margin.left - margin.right;
       const height = 500 - margin.top - margin.bottom;
 
@@ -347,6 +378,21 @@
       })
     }
     </script>
+    <hr/>
+    <p>
+      Some observations:
+    </p>
+    <ul>
+      <li>Vermont sticks out like a sore thumb being the closest to wealth gap partiy.</li>
+      <li>The main political party of the state does not seem to have a significant influence on the width of the wealth gap.</li>
+      <li>At times there are huge outliers in the gap diagram where women greatly outearn men, though this is most likely the result
+        of having few data points and a potential misrepresentation of the industry labels. For example, in Idaho, women make nearly two
+        times the median salary of men in mining. This is probably due to women in mining industries more likely having positions other than
+        physical labor.
+      </li>
+      <li>In most states, the wage gap does indeed increase with age.</li>
+      <li>Asian women have a similar wealth gap as other racial/ethnic groups when compared to Asian men, though in the Pew article, the base of comparison is white men.</li>
+    </ul>
   </body>
 </html>
 
